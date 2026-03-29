@@ -8,12 +8,31 @@ O sistema filtra e recomenda filmes com base no perfil do usuário: **idade**, *
 
 ## Como executar
 
-**Pré-requisito:** Java 11 ou superior.
+**Pré-requisito:** Java 11 ou superior (`java --version` para verificar).
+
+### 1. Clonar o repositório
 
 ```bash
-cd projeto-final-poo
+git clone https://github.com/malu-zinha/projeto_final_poo.git
+cd projeto_final_poo
+```
+
+### 2. Criar o arquivo `.env`
+
+Na **raiz do repositório** (mesmo nível do `src/`), crie um arquivo chamado `.env` com o seguinte conteúdo:
+
+```
+SUPABASE_URL=https://itymvyqgujbpmqscfspz.supabase.co
+SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0eW12eXFndWpicG1xc2Nmc3B6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3Mjc2MzYsImV4cCI6MjA5MDMwMzYzNn0.M0EBMm1ws6uJRDyNegap_N4NgP_Zbb7OPb20VDGsMEw
+```
+
+> Sem o `.env`, o sistema funciona em modo offline (dados ficam apenas em memória).
+
+### 3. Compilar e rodar
+
+```bash
 mkdir -p out
-javac -d out $(find projeto_final_poo/src/main/java -name "*.java")
+javac -d out $(find src/main/java -name "*.java")
 java -cp out main.Main
 ```
 
