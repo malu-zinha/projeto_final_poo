@@ -41,6 +41,12 @@ public class PlataformaRecomendacao {
         this.proximoIdFilme = catalogo.size() + 1;
     }
 
+    //private static String normalizarEmail(String entrada) {
+    //    String limpo = entrada.replaceAll("[^a-zA-Z0-9._-]", "");
+    //    if (limpo.isEmpty()) limpo = "user" + System.currentTimeMillis();
+    //    return limpo + "@email.com";
+    //}
+
     public Usuario cadastrarUsuario(String nome, String email, String senha, int idade)
             throws UsuarioJaCadastradoException, IdadeInvalidaException {
         if (idade <= 0) {

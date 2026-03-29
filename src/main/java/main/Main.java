@@ -71,7 +71,7 @@ public class Main {
             Usuario u = plataforma.cadastrarUsuario(nome, email, senha, idade);
             usuarioLogado = u;
             sucesso = true;
-            System.out.println("Cadastro realizado com sucesso! Bem-vindo(a), " + u.getNome() + "!\n");
+            System.out.println("Cadastro realizado com sucesso! Bem-vindo" + u.getNome() + "!\n");
         } catch (UsuarioJaCadastradoException e) {
             System.out.println("Erro: " + e.getMessage() + "\n");
         } catch (IdadeInvalidaException e) {
