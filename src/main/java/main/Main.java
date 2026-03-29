@@ -154,6 +154,8 @@ public class Main {
             usuarioLogado.setDuracaoMaxima(max);
         }
 
+        // Persiste no Supabase (se configurado)
+        plataforma.salvarPreferencias(usuarioLogado);
         System.out.println("Preferências atualizadas!\n");
     }
 

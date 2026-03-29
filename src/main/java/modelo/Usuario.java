@@ -14,6 +14,10 @@ public class Usuario {
     private int duracaoMinima;
     private int duracaoMaxima;
 
+    // Campos para integração com Supabase (transientes — não existiam no modelo original)
+    private String supabaseId;
+    private String accessToken;
+
     public Usuario(int id, String nome, String email, String senha, int idade) {
         this.id = id;
         this.nome = nome;
@@ -103,4 +107,10 @@ public class Usuario {
 
     public int getDuracaoMaxima() { return duracaoMaxima; }
     public void setDuracaoMaxima(int duracaoMaxima) { this.duracaoMaxima = duracaoMaxima; }
+
+    public String getSupabaseId() { return supabaseId; }
+    public void setSupabaseId(String supabaseId) { this.supabaseId = supabaseId; }
+
+    public String getAccessToken() { return accessToken; }
+    public void setAccessToken(String accessToken) { this.accessToken = accessToken; }
 }
