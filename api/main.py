@@ -1,3 +1,4 @@
+#teste
 import base64
 from fastapi import FastAPI, Header, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
