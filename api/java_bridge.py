@@ -2,8 +2,8 @@ import json
 import subprocess
 from pathlib import Path
 
-WORKSPACE_ROOT = Path(__file__).resolve().parent.parent.parent
-JAVA_CP = str(WORKSPACE_ROOT / "out")
+REPO_ROOT = Path(__file__).resolve().parent.parent
+JAVA_CP = str(REPO_ROOT / "out")
 
 
 def chamar_java(comando, args=None):
@@ -15,7 +15,7 @@ def chamar_java(comando, args=None):
         cmd,
         capture_output=True,
         text=True,
-        cwd=str(WORKSPACE_ROOT),
+        cwd=str(REPO_ROOT),
         timeout=30,
     )
 
