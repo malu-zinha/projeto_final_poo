@@ -52,8 +52,15 @@ public class Usuario {
 
     // Verifica compatibilidade: gênero, duração, streaming e faixa etária
     public boolean isCompativel(Filme f) {
-        boolean generoOk = generosPreferidos.isEmpty()
-                || generosPreferidos.contains(f.getGenero());
+        boolean generoOk = generosPreferidos.isEmpty();
+        if (!generoOk) {
+            for (Genero g : f.getGeneros()) {
+                if (generosPreferidos.contains(g)) {
+                    generoOk = true;
+                    break;
+                }
+            }
+        }
 
         boolean duracaoOk = f.getDuracaoMinutos() >= duracaoMinima
                 && f.getDuracaoMinutos() <= duracaoMaxima;

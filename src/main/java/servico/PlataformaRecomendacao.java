@@ -107,9 +107,9 @@ public class PlataformaRecomendacao {
 
                 String supabaseId = perfil[0];
                 String nome = perfil[1];
-                int idade = Integer.parseInt(perfil[3]);
-                int durMin = Integer.parseInt(perfil[4]);
-                int durMax = Integer.parseInt(perfil[5]);
+                int idade = parseIntSafe(perfil[3], 18);
+                int durMin = parseIntSafe(perfil[4], 60);
+                int durMax = parseIntSafe(perfil[5], 240);
 
                 Usuario u = new Usuario(proximoIdUsuario++, nome, email, senha, idade);
                 u.setSupabaseId(supabaseId);
@@ -193,7 +193,7 @@ public class PlataformaRecomendacao {
     public ArrayList<Filme> listarPorGenero(Genero g) {
         ArrayList<Filme> resultado = new ArrayList<>();
         for (Filme f : filmes) {
-            if (f.getGenero() == g) {
+            if (f.contemGenero(g)) {
                 resultado.add(f);
             }
         }
@@ -206,4 +206,10 @@ public class PlataformaRecomendacao {
 
     public int getTotalFilmes() { return filmes.size(); }
     public int getTotalUsuarios() { return usuarios.size(); }
+
+    private static int parseIntSafe(String valor, int fallback) {
+        if (valor == null || valor.isEmpty() || valor.equals("null")) return fallback;
+        try { return Integer.parseInt(valor); }
+        catch (NumberFormatException e) { return fallback; }
+    }
 }

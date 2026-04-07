@@ -131,17 +131,12 @@ public class ApiHandler {
             Filme f = filmes.get(i);
             sb.append("{\"id\":").append(f.getId())
               .append(",\"titulo\":\"").append(esc(f.getTitulo())).append("\"")
-              .append(",\"ano\":").append(f.getAnoLancamento())
               .append(",\"duracao\":").append(f.getDuracaoMinutos())
               .append(",\"duracao_formatada\":\"").append(esc(f.getDuracaoFormatada())).append("\"")
-              .append(",\"sinopse\":\"").append(esc(f.getSinopse())).append("\"")
               .append(",\"faixa_etaria\":\"").append(f.getFaixaEtaria().name()).append("\"")
               .append(",\"faixa_etaria_minima\":").append(f.getFaixaEtaria().getIdadeMinima())
-              .append(",\"genero\":\"").append(f.getGenero().name()).append("\"")
-              .append(",\"genero_descricao\":\"").append(esc(f.getGenero().getDescricao())).append("\"")
-              .append(",\"nota_imdb\":").append(f.getNotaIMDB())
-              .append(",\"oscar_indicacoes\":").append(f.getOscarIndicacoes())
-              .append(",\"oscar_vitorias\":").append(f.getOscarVitorias())
+              .append(",\"oscar_ano\":\"").append(esc(f.getOscarAno())).append("\"")
+              .append(",\"generos\":").append(toJsonArray(f.getGeneros()))
               .append(",\"streamings\":[");
             ArrayList<Streaming> streams = f.getStreamings();
             for (int j = 0; j < streams.size(); j++) {

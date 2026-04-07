@@ -1,0 +1,1009 @@
+{
+    "Oscar 2026": {
+      "Pecadores": {
+        "genero": [
+          "Terror",
+          "Ação"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "2h 17",
+        "streaming_assinatura": [
+          "HBO Max"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Mercado Play",
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Claro TV+"
+        ]
+      },
+      "Uma batalha após a outra": {
+        "genero": [
+          "Ação",
+          "Drama"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "2h 42",
+        "streaming_assinatura": [
+          "HBO Max"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Mercado Play",
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Claro TV+"
+        ]
+      },
+      "Frankenstein": {
+        "genero": [
+          "Terror",
+          "Ficção Científica"
+        ],
+        "classificacao_indicativa": "18 anos",
+        "duracao": "2h 30",
+        "streaming_assinatura": [
+          "Netflix"
+        ],
+        "streaming_compra_aluguel": []
+      },
+      "Hamnet": {
+        "genero": [
+          "Drama"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "2h 05",
+        "streaming_assinatura": [],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Youtube"
+        ]
+      },
+      "Bugonia": {
+        "genero": [
+          "Comédia",
+          "Ficção Científica"
+        ],
+        "classificacao_indicativa": "18 anos",
+        "duracao": "1h 59",
+        "streaming_assinatura": [],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Claro TV+",
+          "Youtube"
+        ]
+      },
+      "F1": {
+        "genero": [
+          "Ação",
+          "Esporte"
+        ],
+        "classificacao_indicativa": "12 anos",
+        "duracao": "2h 35",
+        "streaming_assinatura": [
+          "Apple TV"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Google Play Filmes e TV",
+          "Youtube"
+        ]
+      },
+      "Marty Supreme": {
+        "genero": [
+          "Drama",
+          "Esporte"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "2h 30",
+        "streaming_assinatura": [],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Google Play Filmes e TV",
+          "Youtube"
+        ]
+      },
+      "O agente secreto": {
+        "genero": [
+          "Thriller",
+          "Crime"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "2h 40",
+        "streaming_assinatura": [
+          "Netflix"
+        ],
+        "streaming_compra_aluguel": []
+      },
+      "Valor sentimental": {
+        "genero": [
+          "Drama"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "2h 13",
+        "streaming_assinatura": [
+          "MUBI"
+        ],
+        "streaming_compra_aluguel": [
+          "Apple TV"
+        ]
+      },
+      "Sonhos de trem": {
+        "genero": [
+          "Drama"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "1h 42",
+        "streaming_assinatura": [
+          "Netflix"
+        ],
+        "streaming_compra_aluguel": []
+      },
+      "Se eu tivesse pernas, eu te chutaria": {
+        "genero": [
+          "Comédia",
+          "Drama"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "1h 53",
+        "streaming_assinatura": [],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Google Play Filmes e TV",
+          "Youtube"
+        ]
+      },
+      "Song Song Blue - Um sonho a dois": {
+        "genero": [
+          "Musical",
+          "Romance"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "2h 13",
+        "streaming_assinatura": [],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Youtube"
+        ]
+      },
+      "Blue Moon": {
+        "genero": [
+          "Musical",
+          "Drama"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "1h 40",
+        "streaming_assinatura": [],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Google Play Filmes e TV",
+          "Youtube"
+        ]
+      },
+      "Avatar: Fogo e cinzas": {
+        "genero": [
+          "Ação",
+          "Fantasia"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "3h 17",
+        "streaming_assinatura": [],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Youtube"
+        ]
+      },
+      "Jurassic World: Recomeço": {
+        "genero": [
+          "Ação",
+          "Ficção Científica"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "2h 14",
+        "streaming_assinatura": [
+          "Amazon Prime Video"
+        ],
+        "streaming_compra_aluguel": [
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Claro TV+",
+          "Youtube"
+        ]
+      },
+      "O ônibus perdido": {
+        "genero": [
+          "Drama",
+          "Suspense"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "2h 09",
+        "streaming_assinatura": [
+          "Apple TV"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video"
+        ]
+      },
+      "Guerreiras do K-Pop": {
+        "genero": [
+          "Animação",
+          "Musical"
+        ],
+        "classificacao_indicativa": "10 anos",
+        "duracao": "1h 36",
+        "streaming_assinatura": [
+          "Netflix"
+        ],
+        "streaming_compra_aluguel": []
+      },
+      "Zootopia 2": {
+        "genero": [
+          "Animação",
+          "Comédia"
+        ],
+        "classificacao_indicativa": "6 anos",
+        "duracao": "1h 48",
+        "streaming_assinatura": [
+          "Disney+"
+        ],
+        "streaming_compra_aluguel": []
+      },
+      "Arco": {
+        "genero": [
+          "Animação",
+          "Ficção Científica",
+          "Aventura"
+        ],
+        "classificacao_indicativa": "10 anos",
+        "duracao": "1h 29",
+        "streaming_assinatura": [
+          "MUBI"
+        ],
+        "streaming_compra_aluguel": []
+      },
+      "Elio": {
+        "genero": [
+          "Animação",
+          "Aventura"
+        ],
+        "classificacao_indicativa": "Livre",
+        "duracao": "1h 39",
+        "streaming_assinatura": [
+          "Disney+"
+        ],
+        "streaming_compra_aluguel": []
+      },
+      "A pequena Amélie": {
+        "genero": [
+          "Animação"
+        ],
+        "classificacao_indicativa": "Livre",
+        "duracao": "1h 18",
+        "streaming_assinatura": [],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Youtube"
+        ]
+      },
+      "Sirât": {
+        "genero": [
+          "Suspense",
+          "Aventura"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "1h 55",
+        "streaming_assinatura": [
+          "Amazon Prime Video (indisponível no Brasil)"
+        ],
+        "streaming_compra_aluguel": []
+      },
+      "Diane Warren: Relentless": {
+        "genero": [
+          "Musical",
+          "Documentário"
+        ],
+        "classificacao_indicativa": null,
+        "duracao": "1h 31",
+        "streaming_assinatura": [],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video (indisponível no Brasil)",
+          "Apple TV (indisponível no Brasil)",
+          "Google Play Filmes e TV (indisponível no Brasil)"
+        ]
+      },
+      "Viva Verdi!": {
+        "genero": [
+          "Documentário"
+        ],
+        "classificacao_indicativa": "Livre",
+        "duracao": "1h 17",
+        "streaming_assinatura": [
+          "MUBI (talvez indisponível)"
+        ],
+        "streaming_compra_aluguel": []
+      },
+      "Foi apenas um acidente": {
+        "genero": [
+          "Suspense",
+          "Crime"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "1h 44",
+        "streaming_assinatura": [
+          "MUBI"
+        ],
+        "streaming_compra_aluguel": [
+          "Apple TV"
+        ]
+      },
+      "A voz de Hind Rajab": {
+        "genero": [
+          "Drama"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "1h 29",
+        "streaming_assinatura": [],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Youtube"
+        ]
+      },
+      "A hora do mal": {
+        "genero": [
+          "Terror",
+          "Mistério"
+        ],
+        "classificacao_indicativa": "18 anos",
+        "duracao": "2h 09",
+        "streaming_assinatura": [
+          "HBO Max"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Mercado Play",
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Claro TV+"
+        ]
+      },
+      "Kokuho": {
+        "genero": [
+          "Drama",
+          "Ficção"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "2h 54",
+        "streaming_assinatura": [
+          "MUBI"
+        ],
+        "streaming_compra_aluguel": []
+      },
+      "Coração de lutador: The Smashing Machine": {
+        "genero": [
+          "Ação",
+          "Esporte"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "2h 03",
+        "streaming_assinatura": [
+          "Amazon Prime Video"
+        ],
+        "streaming_compra_aluguel": [
+          "Google Play Filmes e TV",
+          "Claro TV+",
+          "Youtube"
+        ]
+      },
+      "A Meia-Irmã Feia": {
+        "genero": [
+          "Terror",
+          "Sátira"
+        ],
+        "classificacao_indicativa": "18 anos",
+        "duracao": "1h 45",
+        "streaming_assinatura": [
+          "MUBI"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Google Play Filmes e TV",
+          "Claro TV+",
+          "Youtube"
+        ]
+      },
+      "The Alabama Solution": {
+        "genero": [
+          "Documentário"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "1h 54",
+        "streaming_assinatura": [
+          "HBO Max"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video"
+        ]
+      },
+      "Come See Me in the Good Light": {
+        "genero": [
+          "Documentário"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "1h 44",
+        "streaming_assinatura": [
+          "Apple TV"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video"
+        ]
+      },
+      "Cutting Through Rocks": {
+        "genero": [
+          "Documentário"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "1h 35",
+        "streaming_assinatura": [],
+        "streaming_compra_aluguel": [
+          "Apple TV"
+        ]
+      },
+      "Mr. Nobody Against Putin": {
+        "genero": [
+          "Documentário"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "1h 30",
+        "streaming_assinatura": [],
+        "streaming_compra_aluguel": [
+          "Apple TV"
+        ]
+      },
+      "The Perfect Neighbor": {
+        "genero": [
+          "Documentário"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "1h 36",
+        "streaming_assinatura": [
+          "Netflix"
+        ],
+        "streaming_compra_aluguel": []
+      }
+    },
+    "Oscar 2025": {
+      "Anora": {
+        "genero": [
+          "Drama",
+          "Romance",
+          "Comédia"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "2h 19",
+        "streaming_assinatura": [
+          "Amazon Prime Video"
+        ],
+        "streaming_compra_aluguel": [
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Claro TV+",
+          "Youtube"
+        ]
+      },
+      "A verdadeira dor": {
+        "genero": [
+          "Comédia",
+          "Drama"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "1h 29",
+        "streaming_assinatura": [
+          "Disney+"
+        ],
+        "streaming_compra_aluguel": []
+      },
+      "Um completo desconhecido": {
+        "genero": [
+          "Drama",
+          "Música"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "2h 21",
+        "streaming_assinatura": [
+          "Disney+"
+        ],
+        "streaming_compra_aluguel": []
+      },
+      "O Brutalista": {
+        "genero": [
+          "Drama",
+          "História"
+        ],
+        "classificacao_indicativa": "18 anos",
+        "duracao": "3h 35",
+        "streaming_assinatura": [
+          "Amazon Prime Video"
+        ],
+        "streaming_compra_aluguel": [
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Claro TV+"
+        ]
+      },
+      "O Aprendiz": {
+        "genero": [
+          "Drama",
+          "História"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "2h 03",
+        "streaming_assinatura": [],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Google Play Filmes e TV",
+          "Youtube"
+        ]
+      },
+      "Conclave": {
+        "genero": [
+          "Thriller",
+          "Mistério"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "2h",
+        "streaming_assinatura": [
+          "Amazon Prime Video"
+        ],
+        "streaming_compra_aluguel": [
+          "Google Play Filmes e TV",
+          "Youtube"
+        ]
+      },
+      "Gladiador 2": {
+        "genero": [
+          "Ação",
+          "Aventura"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "2h 28",
+        "streaming_assinatura": [
+          "Netflix"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Apple TV",
+          "Google Play Filmes e TV"
+        ]
+      },
+      "Nosferatu": {
+        "genero": [
+          "Terror",
+          "Mistério"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "2h 12",
+        "streaming_assinatura": [
+          "Amazon Prime Video"
+        ],
+        "streaming_compra_aluguel": [
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Youtube"
+        ]
+      },
+      "Wicked": {
+        "genero": [
+          "Musical",
+          "Fantasia"
+        ],
+        "classificacao_indicativa": "10 anos",
+        "duracao": "2h 40",
+        "streaming_assinatura": [
+          "Amazon Prime Video"
+        ],
+        "streaming_compra_aluguel": [
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Claro TV+",
+          "Youtube"
+        ]
+      },
+      "Um homem diferente": {
+        "genero": [
+          "Thriller",
+          "Drama"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "1h 52",
+        "streaming_assinatura": [
+          "MUBI"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Claro TV+"
+        ]
+      },
+      "Emília Pérez": {
+        "genero": [
+          "Musical",
+          "Crime"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "2h 12",
+        "streaming_assinatura": [
+          "Telecine"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Claro TV+",
+          "Youtube"
+        ]
+      },
+      "Robô Selvagem": {
+        "genero": [
+          "Animação",
+          "Ficção Científica"
+        ],
+        "classificacao_indicativa": "Livre",
+        "duracao": "1h 42",
+        "streaming_assinatura": [
+          "Amazon Prime Video"
+        ],
+        "streaming_compra_aluguel": [
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Claro TV+",
+          "Youtube"
+        ]
+      },
+      "Nickel Boys": {
+        "genero": [
+          "Drama"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "2h 20",
+        "streaming_assinatura": [
+          "Amazon Prime Video"
+        ],
+        "streaming_compra_aluguel": []
+      },
+      "Sing Sing": {
+        "genero": [
+          "Drama"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "1h 47",
+        "streaming_assinatura": [
+          "Amazon Prime Video"
+        ],
+        "streaming_compra_aluguel": [
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Youtube"
+        ]
+      },
+      "Setembro 5": {
+        "genero": [
+          "Thriller",
+          "Suspense"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "1h 34",
+        "streaming_assinatura": [
+          "Netflix"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Claro TV+"
+        ]
+      },
+      "A Substância": {
+        "genero": [
+          "Terror",
+          "Ficção Científica"
+        ],
+        "classificacao_indicativa": "18 anos",
+        "duracao": "2h 20",
+        "streaming_assinatura": [
+          "HBO Max",
+          "MUBI"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Apple TV",
+          "Claro TV+"
+        ]
+      },
+      "Batalhão 6888": {
+        "genero": [
+          "Guerra",
+          "Drama"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "2h 07",
+        "streaming_assinatura": [
+          "Netflix"
+        ],
+        "streaming_compra_aluguel": []
+      },
+      "Elton John: Never too late": {
+        "genero": [
+          "Documentário",
+          "Musical"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "1h 42",
+        "streaming_assinatura": [
+          "Disney+"
+        ],
+        "streaming_compra_aluguel": []
+      },
+      "Ainda Estou Aqui": {
+        "genero": [
+          "Drama",
+          "História"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "2h 15",
+        "streaming_assinatura": [
+          "Globoplay"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Claro TV+"
+        ]
+      },
+      "A garota da agulha": {
+        "genero": [
+          "Crime",
+          "Drama"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "1h 35",
+        "streaming_assinatura": [
+          "MUBI"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Apple TV"
+        ]
+      },
+      "A semente do fruto sagrado": {
+        "genero": [
+          "Crime",
+          "Suspense"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "2h 48",
+        "streaming_assinatura": [
+          "Telecine"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Google Play Filmes e TV",
+          "Claro TV+",
+          "Youtube"
+        ]
+      },
+      "Flow": {
+        "genero": [
+          "Animação",
+          "Aventura",
+          "Fantasia"
+        ],
+        "classificacao_indicativa": "Livre",
+        "duracao": "1h 25",
+        "streaming_assinatura": [],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Claro TV+",
+          "Youtube"
+        ]
+      },
+      "Divertida Mente 2": {
+        "genero": [
+          "Animação",
+          "Comédia"
+        ],
+        "classificacao_indicativa": "Livre",
+        "duracao": "1h 36",
+        "streaming_assinatura": [
+          "Disney+"
+        ],
+        "streaming_compra_aluguel": []
+      },
+      "Memórias de um caracol": {
+        "genero": [
+          "Animação",
+          "Drama",
+          "Comédia"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "1h 35",
+        "streaming_assinatura": [
+          "HBO Max"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Google Play Filmes e TV",
+          "Claro TV+",
+          "Youtube"
+        ]
+      },
+      "Wallace & Gromit: Avengança": {
+        "genero": [
+          "Animação",
+          "Comédia",
+          "Aventura"
+        ],
+        "classificacao_indicativa": "10 anos",
+        "duracao": "1h 19",
+        "streaming_assinatura": [
+          "Netflix"
+        ],
+        "streaming_compra_aluguel": []
+      },
+      "Duna: Parte 2": {
+        "genero": [
+          "Ficção Científica",
+          "Aventura"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "2h 46",
+        "streaming_assinatura": [
+          "HBO Max",
+          "Netflix"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Mercado Play",
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Claro TV+"
+        ]
+      },
+      "Alien: Romulus": {
+        "genero": [
+          "Terror",
+          "Ficção Científica"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "1h 59",
+        "streaming_assinatura": [
+          "HBO Max",
+          "Disney+"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video"
+        ]
+      },
+      "Better Man: A História de Robbie Williams": {
+        "genero": [
+          "Musical",
+          "Fantasia"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "2h 14",
+        "streaming_assinatura": [
+          "Amazon Prime Video"
+        ],
+        "streaming_compra_aluguel": [
+          "Apple TV",
+          "Google Play Filmes e TV",
+          "Claro TV+",
+          "Youtube"
+        ]
+      },
+      "Planeta dos Macacos: O Reinado": {
+        "genero": [
+          "Ação",
+          "Ficção Científica"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "2h 25",
+        "streaming_assinatura": [
+          "HBO Max",
+          "Disney+"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video"
+        ]
+      },
+      "Maria Callas": {
+        "genero": [
+          "Musical",
+          "Drama"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "2h 03",
+        "streaming_assinatura": [
+          "Amazon Prime Video"
+        ],
+        "streaming_compra_aluguel": [
+          "Apple TV",
+          "Youtube"
+        ]
+      },
+      "Black box diaries": {
+        "genero": [
+          "Documentário"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "1h 43",
+        "streaming_assinatura": [],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Google Play Filmes e TV",
+          "Claro TV+",
+          "Youtube"
+        ]
+      },
+      "No other land": {
+        "genero": [
+          "Documentário"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "1h 36",
+        "streaming_assinatura": [
+          "MUBI"
+        ],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Google Play Filmes e TV",
+          "Claro TV+",
+          "Youtube"
+        ]
+      },
+      "Porcelain war": {
+        "genero": [
+          "Documentário"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "1h 27",
+        "streaming_assinatura": [],
+        "streaming_compra_aluguel": []
+      },
+      "Soundtrack to a coup d'etat": {
+        "genero": [
+          "Documentário"
+        ],
+        "classificacao_indicativa": "14 anos",
+        "duracao": "2h 30",
+        "streaming_assinatura": [],
+        "streaming_compra_aluguel": [
+          "Amazon Prime Video",
+          "Google Play Filmes e TV",
+          "Claro TV+",
+          "Youtube"
+        ]
+      },
+      "Sugarcane": {
+        "genero": [
+          "Documentário"
+        ],
+        "classificacao_indicativa": "16 anos",
+        "duracao": "1h 47",
+        "streaming_assinatura": [
+          "Disney+"
+        ],
+        "streaming_compra_aluguel": []
+      }
+    }
+  }

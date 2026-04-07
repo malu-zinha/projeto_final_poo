@@ -208,7 +208,6 @@ public class Main {
             Filme f = plataforma.buscarFilme(titulo);
             System.out.println("\n\033[0;1mDetalhes\033[0m");
             System.out.println(f);
-            System.out.println("\033[0;1mSinopse: \033[0m" + f.getSinopse());
             System.out.println("\033[0;1mFaixa etária: \033[0m" + f.getFaixaEtaria() + "\n");
         } catch (FilmeNaoEncontradoException e) {
             System.out.println("Erro: " + e.getMessage() + "\n");

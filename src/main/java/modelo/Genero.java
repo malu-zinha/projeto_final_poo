@@ -1,6 +1,5 @@
 package modelo;
 
-// Enum que representa os gêneros de filmes disponíveis no sistema (encapsulamento de constantes)
 public enum Genero {
     DRAMA("Drama"),
     COMEDIA("Comédia"),
@@ -10,7 +9,19 @@ public enum Genero {
     ROMANCE("Romance"),
     FICCAO_CIENTIFICA("Ficção Científica"),
     THRILLER("Thriller"),
-    DOCUMENTARIO("Documentário");
+    DOCUMENTARIO("Documentário"),
+    MUSICAL("Musical"),
+    CRIME("Crime"),
+    SUSPENSE("Suspense"),
+    MISTERIO("Mistério"),
+    AVENTURA("Aventura"),
+    FANTASIA("Fantasia"),
+    GUERRA("Guerra"),
+    HISTORIA("História"),
+    ESPORTE("Esporte"),
+    SATIRA("Sátira"),
+    FICCAO("Ficção"),
+    MUSICA("Música");
 
     private final String descricao;
 
@@ -20,5 +31,14 @@ public enum Genero {
 
     public String getDescricao() {
         return descricao;
+    }
+
+    public static Genero fromDescricao(String desc) {
+        for (Genero g : values()) {
+            if (g.descricao.equalsIgnoreCase(desc.trim())) {
+                return g;
+            }
+        }
+        return null;
     }
 }

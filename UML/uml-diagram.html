@@ -5,181 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diagrama UML - CineOscar</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #f8fafc;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8fafc; overflow: hidden; display: flex; flex-direction: column; height: 100vh;
         }
-
         header {
-            background: white;
-            border-bottom: 1px solid #e2e8f0;
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            background: white; border-bottom: 1px solid #e2e8f0; padding: 1.5rem 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
-
-        .header-title h1 {
-            font-size: 1.875rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 0.25rem;
-        }
-
-        .header-title p {
-            font-size: 0.875rem;
-            color: #64748b;
-        }
-
-        .zoom-controls {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
+        .header-title h1 { font-size: 1.875rem; font-weight: 700; color: #0f172a; margin-bottom: 0.25rem; }
+        .header-title p { font-size: 0.875rem; color: #64748b; }
+        .zoom-controls { display: flex; align-items: center; gap: 0.75rem; }
         .btn {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            border: 1px solid #cbd5e1;
-            background: white;
-            border-radius: 0.375rem;
-            cursor: pointer;
-            font-size: 0.875rem;
-            color: #334155;
-            transition: all 0.2s;
+            display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem;
+            border: 1px solid #cbd5e1; background: white; border-radius: 0.375rem;
+            cursor: pointer; font-size: 0.875rem; color: #334155; transition: all 0.2s;
         }
-
-        .btn:hover {
-            background: #f1f5f9;
-            border-color: #94a3b8;
-        }
-
-        .btn:active {
-            transform: scale(0.98);
-        }
-
-        .btn svg {
-            width: 1rem;
-            height: 1rem;
-        }
-
-        .zoom-label {
-            font-family: 'Courier New', monospace;
-            font-size: 0.875rem;
-            color: #64748b;
-            min-width: 4rem;
-            text-align: center;
-            font-weight: 600;
-        }
-
-        .diagram-container {
-            flex: 1;
-            overflow: auto;
-            background: #f1f5f9;
-            padding: 2rem;
-        }
-
-        .diagram-wrapper {
-            display: inline-block;
-            transform-origin: top left;
-            transition: transform 0.3s ease;
-        }
-
-        footer {
-            background: white;
-            border-top: 1px solid #e2e8f0;
-            padding: 0.75rem 2rem;
-            box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        .legend {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            font-size: 0.75rem;
-        }
-
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .legend-line {
-            width: 1.5rem;
-            height: 0.125rem;
-            background: #0f172a;
-        }
-
-        .legend-line-dashed {
-            width: 1.5rem;
-            height: 0.125rem;
-            border-top: 2px dashed #64748b;
-        }
-
-        .legend-line-composition {
-            width: 1.5rem;
-            height: 0.125rem;
-            border-top: 2px solid #2563eb;
-        }
-
-        .legend-box {
-            width: 2rem;
-            height: 1.5rem;
-            border-radius: 0.25rem;
-            border: 1px solid;
-        }
-
-        .legend-box-abstract {
-            background: #dbeafe;
-            border-color: #3b82f6;
-        }
-
-        .legend-box-enum {
-            background: #d1fae5;
-            border-color: #10b981;
-        }
-
-        .legend-box-exception {
-            background: #fee2e2;
-            border-color: #dc2626;
-        }
-
-        .legend-text {
-            color: #64748b;
-        }
-
-        /* Scrollbar styling */
-        .diagram-container::-webkit-scrollbar {
-            width: 12px;
-            height: 12px;
-        }
-
-        .diagram-container::-webkit-scrollbar-track {
-            background: #e2e8f0;
-        }
-
-        .diagram-container::-webkit-scrollbar-thumb {
-            background: #94a3b8;
-            border-radius: 6px;
-        }
-
-        .diagram-container::-webkit-scrollbar-thumb:hover {
-            background: #64748b;
-        }
+        .btn:hover { background: #f1f5f9; border-color: #94a3b8; }
+        .btn svg { width: 1rem; height: 1rem; }
+        .zoom-label { font-family: 'Courier New', monospace; font-size: 0.875rem; color: #64748b; min-width: 4rem; text-align: center; font-weight: 600; }
+        .diagram-container { flex: 1; overflow: auto; background: #f1f5f9; padding: 2rem; }
+        .diagram-wrapper { display: inline-block; transform-origin: top left; transition: transform 0.3s ease; }
+        footer { background: white; border-top: 1px solid #e2e8f0; padding: 0.75rem 2rem; box-shadow: 0 -1px 3px rgba(0,0,0,0.1); }
+        .legend { display: flex; align-items: center; gap: 2rem; font-size: 0.75rem; }
+        .legend-item { display: flex; align-items: center; gap: 0.5rem; }
+        .legend-line { width: 1.5rem; height: 0.125rem; background: #0f172a; }
+        .legend-line-dashed { width: 1.5rem; height: 0.125rem; border-top: 2px dashed #64748b; }
+        .legend-line-composition { width: 1.5rem; height: 0.125rem; border-top: 2px solid #2563eb; }
+        .legend-box { width: 2rem; height: 1.5rem; border-radius: 0.25rem; border: 1px solid; }
+        .legend-box-abstract { background: #dbeafe; border-color: #3b82f6; }
+        .legend-box-enum { background: #d1fae5; border-color: #10b981; }
+        .legend-box-exception { background: #fee2e2; border-color: #dc2626; }
+        .legend-text { color: #64748b; }
+        .diagram-container::-webkit-scrollbar { width: 12px; height: 12px; }
+        .diagram-container::-webkit-scrollbar-track { background: #e2e8f0; }
+        .diagram-container::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 6px; }
     </style>
 </head>
 <body>
@@ -188,566 +50,451 @@
             <h1>Diagrama UML - CineOscar</h1>
             <p>Sistema de Recomendação de Filmes - Projeto POO</p>
         </div>
-        
         <div class="zoom-controls">
-            <button class="btn" id="zoomOut">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7" />
-                </svg>
-                Reduzir
-            </button>
+            <button class="btn" id="zoomOut"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7"/></svg>Reduzir</button>
             <span class="zoom-label" id="zoomLabel">100%</span>
-            <button class="btn" id="zoomIn">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                </svg>
-                Ampliar
-            </button>
-            <button class="btn" id="zoomReset">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-                </svg>
-                Resetar
-            </button>
+            <button class="btn" id="zoomIn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>Ampliar</button>
+            <button class="btn" id="zoomReset"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>Resetar</button>
         </div>
     </header>
 
     <div class="diagram-container" id="diagramContainer">
         <div class="diagram-wrapper" id="diagramWrapper">
-            <svg width="2400" height="2800" xmlns="http://www.w3.org/2000/svg">
-
+            <svg width="2600" height="2600" xmlns="http://www.w3.org/2000/svg">
                 <defs>
-   
-                    <marker
-                        id="inheritance"
-                        markerWidth="12"
-                        markerHeight="12"
-                        refX="11"
-                        refY="6"
-                        orient="auto"
-                    >
-                        <path d="M 0 0 L 12 6 L 0 12 Z" fill="white" stroke="black" stroke-width="1" />
+                    <marker id="inheritance" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto">
+                        <path d="M 0 0 L 12 6 L 0 12 Z" fill="white" stroke="black" stroke-width="1"/>
                     </marker>
-                    
-                    <marker
-                        id="association"
-                        markerWidth="10"
-                        markerHeight="10"
-                        refX="9"
-                        refY="5"
-                        orient="auto"
-                    >
-                        <path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="#475569" stroke-width="1.5" />
+                    <marker id="association" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+                        <path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="#475569" stroke-width="1.5"/>
                     </marker>
-
-                    <marker
-                        id="composition"
-                        markerWidth="12"
-                        markerHeight="12"
-                        refX="0"
-                        refY="6"
-                        orient="auto"
-                    >
-                        <path d="M 0 6 L 6 0 L 12 6 L 6 12 Z" fill="#2563eb" stroke="#2563eb" stroke-width="1" />
+                    <marker id="composition" markerWidth="12" markerHeight="12" refX="0" refY="6" orient="auto">
+                        <path d="M 0 6 L 6 0 L 12 6 L 6 12 Z" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
                     </marker>
                 </defs>
 
-                <text x="1200" y="30" text-anchor="middle" font-size="32" font-weight="bold" fill="#0f172a">
-                    Diagrama UML - Sistema CineOscar
-                </text>
-                <text x="1200" y="60" text-anchor="middle" font-size="16" fill="#64748b">
-                    Sistema de Recomendação de Filmes Indicados ao Oscar
-                </text>
+                <text x="1300" y="30" text-anchor="middle" font-size="32" font-weight="bold" fill="#0f172a">Diagrama UML - Sistema CineOscar</text>
+                <text x="1300" y="60" text-anchor="middle" font-size="16" fill="#64748b">Sistema de Recomendação de Filmes Indicados ao Oscar</text>
 
+                <!-- ==================== PACKAGE MODELO ==================== -->
                 <g id="package-modelo">
-                    <rect x="50" y="100" width="1100" height="1400" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" rx="8" />
-                    <text x="70" y="130" font-size="20" font-weight="bold" fill="#1e293b">«package» modelo</text>
-                    
+                    <rect x="30" y="90" width="1200" height="1050" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" rx="8"/>
+                    <text x="50" y="120" font-size="20" font-weight="bold" fill="#1e293b">«package» modelo</text>
+
+                    <!-- Filme (abstract) -->
                     <g id="filme-abstract">
-                        <rect x="420" y="160" width="280" height="220" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" rx="4" />
-                        <text x="560" y="185" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e40af">«abstract»</text>
-                        <text x="560" y="205" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">Filme</text>
-                        <line x1="420" y1="215" x2="700" y2="215" stroke="#3b82f6" stroke-width="2" />
-                        
-                        <text x="430" y="235" font-size="13" fill="#334155">- titulo: String</text>
-                        <text x="430" y="255" font-size="13" fill="#334155">- ano: int</text>
-                        <text x="430" y="275" font-size="13" fill="#334155">- duracao: int</text>
-                        <text x="430" y="295" font-size="13" fill="#334155">- notaIMDB: double</text>
-                        <text x="430" y="315" font-size="13" fill="#334155">- indicacoes: int</text>
-                        <text x="430" y="335" font-size="13" fill="#334155">- vitorias: int</text>
-                        <text x="430" y="355" font-size="13" fill="#334155">- faixaEtaria: FaixaEtaria</text>
-                        <line x1="420" y1="365" x2="700" y2="365" stroke="#3b82f6" stroke-width="1" />
-                        
-                        <text x="430" y="380" font-size="13" font-style="italic" fill="#1e40af">+ getGenero(): Genero</text>
+                        <rect x="400" y="140" width="320" height="200" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" rx="4"/>
+                        <text x="560" y="165" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e40af">«abstract»</text>
+                        <text x="560" y="185" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">Filme</text>
+                        <line x1="400" y1="195" x2="720" y2="195" stroke="#3b82f6" stroke-width="2"/>
+                        <text x="410" y="215" font-size="13" fill="#334155">- titulo: String</text>
+                        <text x="410" y="235" font-size="13" fill="#334155">- duracaoMinutos: int</text>
+                        <text x="410" y="255" font-size="13" fill="#334155">- faixaEtaria: FaixaEtaria</text>
+                        <text x="410" y="275" font-size="13" fill="#334155">- generos: ArrayList&lt;Genero&gt;</text>
+                        <text x="410" y="295" font-size="13" fill="#334155">- streamings: ArrayList&lt;Streaming&gt;</text>
+                        <text x="410" y="315" font-size="13" fill="#334155">- oscarAno: String</text>
+                        <line x1="400" y1="325" x2="720" y2="325" stroke="#3b82f6" stroke-width="1"/>
+                        <text x="410" y="338" font-size="13" font-style="italic" fill="#1e40af">+ getGenero(): Genero</text>
                     </g>
 
-                    <g id="filme-drama">
-                        <rect x="70" y="450" width="180" height="80" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4" />
-                        <text x="160" y="475" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">FilmeDrama</text>
-                        <line x1="70" y1="485" x2="250" y2="485" stroke="#f59e0b" stroke-width="1" />
-                        <text x="80" y="505" font-size="12" fill="#334155">+ getGenero(): Genero</text>
-                        <text x="80" y="520" font-size="12" fill="#64748b">  return DRAMA</text>
-                    </g>
+                    <!-- Row 1: 5 subclasses -->
+                    <g><rect x="40" y="410" width="160" height="65" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4"/>
+                        <text x="120" y="433" text-anchor="middle" font-size="14" font-weight="bold" fill="#0f172a">FilmeDrama</text>
+                        <line x1="40" y1="440" x2="200" y2="440" stroke="#f59e0b" stroke-width="1"/>
+                        <text x="50" y="460" font-size="11" fill="#64748b">return DRAMA</text></g>
 
-                    <g id="filme-comedia">
-                        <rect x="270" y="450" width="180" height="80" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4" />
-                        <text x="360" y="475" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">FilmeComedia</text>
-                        <line x1="270" y1="485" x2="450" y2="485" stroke="#f59e0b" stroke-width="1" />
-                        <text x="280" y="505" font-size="12" fill="#334155">+ getGenero(): Genero</text>
-                        <text x="280" y="520" font-size="12" fill="#64748b">  return COMEDIA</text>
-                    </g>
+                    <g><rect x="215" y="410" width="170" height="65" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4"/>
+                        <text x="300" y="433" text-anchor="middle" font-size="14" font-weight="bold" fill="#0f172a">FilmeComedia</text>
+                        <line x1="215" y1="440" x2="385" y2="440" stroke="#f59e0b" stroke-width="1"/>
+                        <text x="225" y="460" font-size="11" fill="#64748b">return COMEDIA</text></g>
 
-                    <g id="filme-acao">
-                        <rect x="470" y="450" width="180" height="80" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4" />
-                        <text x="560" y="475" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">FilmeAcao</text>
-                        <line x1="470" y1="485" x2="650" y2="485" stroke="#f59e0b" stroke-width="1" />
-                        <text x="480" y="505" font-size="12" fill="#334155">+ getGenero(): Genero</text>
-                        <text x="480" y="520" font-size="12" fill="#64748b">  return ACAO</text>
-                    </g>
+                    <g><rect x="400" y="410" width="150" height="65" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4"/>
+                        <text x="475" y="433" text-anchor="middle" font-size="14" font-weight="bold" fill="#0f172a">FilmeAcao</text>
+                        <line x1="400" y1="440" x2="550" y2="440" stroke="#f59e0b" stroke-width="1"/>
+                        <text x="410" y="460" font-size="11" fill="#64748b">return ACAO</text></g>
 
-                    <g id="filme-animacao">
-                        <rect x="670" y="450" width="180" height="80" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4" />
-                        <text x="760" y="475" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">FilmeAnimacao</text>
-                        <line x1="670" y1="485" x2="850" y2="485" stroke="#f59e0b" stroke-width="1" />
-                        <text x="680" y="505" font-size="12" fill="#334155">+ getGenero(): Genero</text>
-                        <text x="680" y="520" font-size="12" fill="#64748b">  return ANIMACAO</text>
-                    </g>
+                    <g><rect x="565" y="410" width="175" height="65" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4"/>
+                        <text x="652" y="433" text-anchor="middle" font-size="14" font-weight="bold" fill="#0f172a">FilmeAnimacao</text>
+                        <line x1="565" y1="440" x2="740" y2="440" stroke="#f59e0b" stroke-width="1"/>
+                        <text x="575" y="460" font-size="11" fill="#64748b">return ANIMACAO</text></g>
 
-                    <g id="filme-terror">
-                        <rect x="870" y="450" width="180" height="80" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4" />
-                        <text x="960" y="475" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">FilmeTerror</text>
-                        <line x1="870" y1="485" x2="1050" y2="485" stroke="#f59e0b" stroke-width="1" />
-                        <text x="880" y="505" font-size="12" fill="#334155">+ getGenero(): Genero</text>
-                        <text x="880" y="520" font-size="12" fill="#64748b">  return TERROR</text>
-                    </g>
+                    <g><rect x="755" y="410" width="160" height="65" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4"/>
+                        <text x="835" y="433" text-anchor="middle" font-size="14" font-weight="bold" fill="#0f172a">FilmeTerror</text>
+                        <line x1="755" y1="440" x2="915" y2="440" stroke="#f59e0b" stroke-width="1"/>
+                        <text x="765" y="460" font-size="11" fill="#64748b">return TERROR</text></g>
 
-                    <g id="filme-romance">
-                        <rect x="120" y="560" width="200" height="80" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4" />
-                        <text x="220" y="585" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">FilmeRomance</text>
-                        <line x1="120" y1="595" x2="320" y2="595" stroke="#f59e0b" stroke-width="1" />
-                        <text x="130" y="615" font-size="12" fill="#334155">+ getGenero(): Genero</text>
-                        <text x="130" y="630" font-size="12" fill="#64748b">  return ROMANCE</text>
-                    </g>
+                    <g><rect x="930" y="410" width="175" height="65" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4"/>
+                        <text x="1017" y="433" text-anchor="middle" font-size="14" font-weight="bold" fill="#0f172a">FilmeRomance</text>
+                        <line x1="930" y1="440" x2="1105" y2="440" stroke="#f59e0b" stroke-width="1"/>
+                        <text x="940" y="460" font-size="11" fill="#64748b">return ROMANCE</text></g>
 
-                    <g id="filme-ficcao">
-                        <rect x="340" y="560" width="220" height="80" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4" />
-                        <text x="450" y="585" text-anchor="middle" font-size="15" font-weight="bold" fill="#0f172a">FilmeFiccaoCientifica</text>
-                        <line x1="340" y1="595" x2="560" y2="595" stroke="#f59e0b" stroke-width="1" />
-                        <text x="350" y="615" font-size="12" fill="#334155">+ getGenero(): Genero</text>
-                        <text x="350" y="630" font-size="12" fill="#64748b">  return FICCAO_CIENTIFICA</text>
-                    </g>
+                    <!-- Row 2: 4 subclasses -->
+                    <g><rect x="40" y="500" width="210" height="65" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4"/>
+                        <text x="145" y="523" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">FilmeFiccaoCientifica</text>
+                        <line x1="40" y1="530" x2="250" y2="530" stroke="#f59e0b" stroke-width="1"/>
+                        <text x="50" y="550" font-size="11" fill="#64748b">return FICCAO_CIENTIFICA</text></g>
 
-                    <g id="filme-thriller">
-                        <rect x="580" y="560" width="180" height="80" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4" />
-                        <text x="670" y="585" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">FilmeThriller</text>
-                        <line x1="580" y1="595" x2="760" y2="595" stroke="#f59e0b" stroke-width="1" />
-                        <text x="590" y="615" font-size="12" fill="#334155">+ getGenero(): Genero</text>
-                        <text x="590" y="630" font-size="12" fill="#64748b">  return THRILLER</text>
-                    </g>
+                    <g><rect x="265" y="500" width="170" height="65" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4"/>
+                        <text x="350" y="523" text-anchor="middle" font-size="14" font-weight="bold" fill="#0f172a">FilmeThriller</text>
+                        <line x1="265" y1="530" x2="435" y2="530" stroke="#f59e0b" stroke-width="1"/>
+                        <text x="275" y="550" font-size="11" fill="#64748b">return THRILLER</text></g>
 
-                    <g id="filme-documentario">
-                        <rect x="780" y="560" width="220" height="80" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4" />
-                        <text x="890" y="585" text-anchor="middle" font-size="15" font-weight="bold" fill="#0f172a">FilmeDocumentario</text>
-                        <line x1="780" y1="595" x2="1000" y2="595" stroke="#f59e0b" stroke-width="1" />
-                        <text x="790" y="615" font-size="12" fill="#334155">+ getGenero(): Genero</text>
-                        <text x="790" y="630" font-size="12" fill="#64748b">  return DOCUMENTARIO</text>
-                    </g>
+                    <g><rect x="450" y="500" width="200" height="65" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4"/>
+                        <text x="550" y="523" text-anchor="middle" font-size="14" font-weight="bold" fill="#0f172a">FilmeDocumentario</text>
+                        <line x1="450" y1="530" x2="650" y2="530" stroke="#f59e0b" stroke-width="1"/>
+                        <text x="460" y="550" font-size="11" fill="#64748b">return DOCUMENTARIO</text></g>
 
-                    <line x1="160" y1="450" x2="500" y2="380" stroke="black" stroke-width="2" marker-end="url(#inheritance)" />
-                    <line x1="360" y1="450" x2="530" y2="380" stroke="black" stroke-width="2" marker-end="url(#inheritance)" />
-                    <line x1="560" y1="450" x2="560" y2="380" stroke="black" stroke-width="2" marker-end="url(#inheritance)" />
-                    <line x1="760" y1="450" x2="590" y2="380" stroke="black" stroke-width="2" marker-end="url(#inheritance)" />
-                    <line x1="960" y1="450" x2="620" y2="380" stroke="black" stroke-width="2" marker-end="url(#inheritance)" />
-                    
-                    <line x1="220" y1="560" x2="520" y2="380" stroke="black" stroke-width="2" marker-end="url(#inheritance)" />
-                    <line x1="450" y1="560" x2="540" y2="380" stroke="black" stroke-width="2" marker-end="url(#inheritance)" />
-                    <line x1="670" y1="560" x2="570" y2="380" stroke="black" stroke-width="2" marker-end="url(#inheritance)" />
-                    <line x1="890" y1="560" x2="600" y2="380" stroke="black" stroke-width="2" marker-end="url(#inheritance)" />
+                    <g><rect x="665" y="500" width="170" height="65" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4"/>
+                        <text x="750" y="523" text-anchor="middle" font-size="14" font-weight="bold" fill="#0f172a">FilmeMusical</text>
+                        <line x1="665" y1="530" x2="835" y2="530" stroke="#f59e0b" stroke-width="1"/>
+                        <text x="675" y="550" font-size="11" fill="#64748b">return MUSICAL</text></g>
 
+                    <!-- Row 3: 3 subclasses -->
+                    <g><rect x="850" y="500" width="160" height="65" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4"/>
+                        <text x="930" y="523" text-anchor="middle" font-size="14" font-weight="bold" fill="#0f172a">FilmeCrime</text>
+                        <line x1="850" y1="530" x2="1010" y2="530" stroke="#f59e0b" stroke-width="1"/>
+                        <text x="860" y="550" font-size="11" fill="#64748b">return CRIME</text></g>
+
+                    <g><rect x="40" y="590" width="175" height="65" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4"/>
+                        <text x="127" y="613" text-anchor="middle" font-size="14" font-weight="bold" fill="#0f172a">FilmeSuspense</text>
+                        <line x1="40" y1="620" x2="215" y2="620" stroke="#f59e0b" stroke-width="1"/>
+                        <text x="50" y="640" font-size="11" fill="#64748b">return SUSPENSE</text></g>
+
+                    <g><rect x="230" y="590" width="160" height="65" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4"/>
+                        <text x="310" y="613" text-anchor="middle" font-size="14" font-weight="bold" fill="#0f172a">FilmeGuerra</text>
+                        <line x1="230" y1="620" x2="390" y2="620" stroke="#f59e0b" stroke-width="1"/>
+                        <text x="240" y="640" font-size="11" fill="#64748b">return GUERRA</text></g>
+
+                    <!-- Inheritance lines row 1 -->
+                    <line x1="120" y1="410" x2="480" y2="340" stroke="black" stroke-width="1.5" marker-end="url(#inheritance)"/>
+                    <line x1="300" y1="410" x2="500" y2="340" stroke="black" stroke-width="1.5" marker-end="url(#inheritance)"/>
+                    <line x1="475" y1="410" x2="530" y2="340" stroke="black" stroke-width="1.5" marker-end="url(#inheritance)"/>
+                    <line x1="652" y1="410" x2="580" y2="340" stroke="black" stroke-width="1.5" marker-end="url(#inheritance)"/>
+                    <line x1="835" y1="410" x2="620" y2="340" stroke="black" stroke-width="1.5" marker-end="url(#inheritance)"/>
+                    <line x1="1017" y1="410" x2="650" y2="340" stroke="black" stroke-width="1.5" marker-end="url(#inheritance)"/>
+                    <!-- Inheritance lines row 2 -->
+                    <line x1="145" y1="500" x2="490" y2="340" stroke="black" stroke-width="1.5" marker-end="url(#inheritance)"/>
+                    <line x1="350" y1="500" x2="520" y2="340" stroke="black" stroke-width="1.5" marker-end="url(#inheritance)"/>
+                    <line x1="550" y1="500" x2="560" y2="340" stroke="black" stroke-width="1.5" marker-end="url(#inheritance)"/>
+                    <line x1="750" y1="500" x2="600" y2="340" stroke="black" stroke-width="1.5" marker-end="url(#inheritance)"/>
+                    <line x1="930" y1="500" x2="640" y2="340" stroke="black" stroke-width="1.5" marker-end="url(#inheritance)"/>
+                    <!-- Inheritance lines row 3 -->
+                    <line x1="127" y1="590" x2="500" y2="340" stroke="black" stroke-width="1.5" marker-end="url(#inheritance)"/>
+                    <line x1="310" y1="590" x2="510" y2="340" stroke="black" stroke-width="1.5" marker-end="url(#inheritance)"/>
+
+                    <!-- Usuario -->
                     <g id="usuario">
-                        <rect x="70" y="720" width="350" height="280" fill="#fff7ed" stroke="#ea580c" stroke-width="2" rx="4" />
-                        <text x="245" y="750" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">Usuario</text>
-                        <line x1="70" y1="760" x2="420" y2="760" stroke="#ea580c" stroke-width="2" />
-                        
-                        <text x="80" y="780" font-size="13" fill="#334155">- id: String</text>
-                        <text x="80" y="800" font-size="13" fill="#334155">- nome: String</text>
-                        <text x="80" y="820" font-size="13" fill="#334155">- email: String</text>
-                        <text x="80" y="840" font-size="13" fill="#334155">- senha: String</text>
-                        <text x="80" y="860" font-size="13" fill="#334155">- idade: int</text>
-                        <text x="80" y="880" font-size="13" fill="#334155">- generosPreferidos: ArrayList&lt;Genero&gt;</text>
-                        <text x="80" y="900" font-size="13" fill="#334155">- streamingsAssinados: ArrayList&lt;Streaming&gt;</text>
-                        <text x="80" y="920" font-size="13" fill="#334155">- duracaoMinima: int</text>
-                        <text x="80" y="940" font-size="13" fill="#334155">- duracaoMaxima: int</text>
-                        <line x1="70" y1="950" x2="420" y2="950" stroke="#ea580c" stroke-width="1" />
-                        
-                        <text x="80" y="970" font-size="13" fill="#334155">+ getters() / setters()</text>
-                        <text x="80" y="990" font-size="13" fill="#334155">+ configurarPreferencias()</text>
+                        <rect x="50" y="700" width="350" height="260" fill="#fff7ed" stroke="#ea580c" stroke-width="2" rx="4"/>
+                        <text x="225" y="725" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">Usuario</text>
+                        <line x1="50" y1="735" x2="400" y2="735" stroke="#ea580c" stroke-width="2"/>
+                        <text x="60" y="755" font-size="13" fill="#334155">- nome: String</text>
+                        <text x="60" y="775" font-size="13" fill="#334155">- email: String</text>
+                        <text x="60" y="795" font-size="13" fill="#334155">- senha: String</text>
+                        <text x="60" y="815" font-size="13" fill="#334155">- idade: int</text>
+                        <text x="60" y="835" font-size="13" fill="#334155">- generosPreferidos: ArrayList&lt;Genero&gt;</text>
+                        <text x="60" y="855" font-size="13" fill="#334155">- streamingsAssinados: ArrayList&lt;Streaming&gt;</text>
+                        <text x="60" y="875" font-size="13" fill="#334155">- duracaoMinima: int</text>
+                        <text x="60" y="895" font-size="13" fill="#334155">- duracaoMaxima: int</text>
+                        <line x1="50" y1="905" x2="400" y2="905" stroke="#ea580c" stroke-width="1"/>
+                        <text x="60" y="925" font-size="13" fill="#334155">+ isCompativel(Filme): boolean</text>
+                        <text x="60" y="945" font-size="13" fill="#334155">+ getters() / setters()</text>
                     </g>
 
+                    <!-- Genero enum -->
                     <g id="genero-enum">
-                        <rect x="500" y="720" width="280" height="200" fill="#d1fae5" stroke="#10b981" stroke-width="2" rx="4" />
-                        <text x="640" y="745" text-anchor="middle" font-size="16" font-weight="bold" fill="#065f46">«enum»</text>
-                        <text x="640" y="765" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">Genero</text>
-                        <line x1="500" y1="775" x2="780" y2="775" stroke="#10b981" stroke-width="2" />
-                        
-                        <text x="510" y="795" font-size="13" fill="#334155">DRAMA</text>
-                        <text x="510" y="815" font-size="13" fill="#334155">COMEDIA</text>
-                        <text x="510" y="835" font-size="13" fill="#334155">ACAO</text>
-                        <text x="510" y="855" font-size="13" fill="#334155">ANIMACAO</text>
-                        <text x="510" y="875" font-size="13" fill="#334155">TERROR</text>
-                        <text x="640" y="795" font-size="13" fill="#334155">ROMANCE</text>
-                        <text x="640" y="815" font-size="13" fill="#334155">FICCAO_CIENTIFICA</text>
-                        <text x="640" y="835" font-size="13" fill="#334155">THRILLER</text>
-                        <text x="640" y="855" font-size="13" fill="#334155">DOCUMENTARIO</text>
-                        <line x1="500" y1="890" x2="780" y2="890" stroke="#10b981" stroke-width="1" />
-                        <text x="510" y="910" font-size="13" fill="#334155">+ getNome(): String</text>
+                        <rect x="440" y="700" width="340" height="280" fill="#d1fae5" stroke="#10b981" stroke-width="2" rx="4"/>
+                        <text x="610" y="722" text-anchor="middle" font-size="16" font-weight="bold" fill="#065f46">«enum»</text>
+                        <text x="610" y="742" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">Genero</text>
+                        <line x1="440" y1="750" x2="780" y2="750" stroke="#10b981" stroke-width="2"/>
+                        <text x="450" y="770" font-size="12" fill="#334155">DRAMA</text>
+                        <text x="450" y="788" font-size="12" fill="#334155">COMEDIA</text>
+                        <text x="450" y="806" font-size="12" fill="#334155">ACAO</text>
+                        <text x="450" y="824" font-size="12" fill="#334155">ANIMACAO</text>
+                        <text x="450" y="842" font-size="12" fill="#334155">TERROR</text>
+                        <text x="450" y="860" font-size="12" fill="#334155">ROMANCE</text>
+                        <text x="450" y="878" font-size="12" fill="#334155">FICCAO_CIENTIFICA</text>
+                        <text x="620" y="770" font-size="12" fill="#334155">THRILLER</text>
+                        <text x="620" y="788" font-size="12" fill="#334155">DOCUMENTARIO</text>
+                        <text x="620" y="806" font-size="12" fill="#334155">MUSICAL</text>
+                        <text x="620" y="824" font-size="12" fill="#334155">CRIME</text>
+                        <text x="620" y="842" font-size="12" fill="#334155">SUSPENSE</text>
+                        <text x="620" y="860" font-size="12" fill="#334155">AVENTURA</text>
+                        <text x="620" y="878" font-size="12" fill="#334155">FANTASIA ...</text>
+                        <line x1="440" y1="895" x2="780" y2="895" stroke="#10b981" stroke-width="1"/>
+                        <text x="450" y="915" font-size="12" fill="#334155">+ getDescricao(): String</text>
+                        <text x="450" y="933" font-size="12" fill="#334155">+ fromDescricao(String): Genero</text>
+                        <text x="450" y="955" font-size="12" fill="#64748b">  (21 valores no total)</text>
                     </g>
 
+                    <!-- Streaming enum -->
                     <g id="streaming-enum">
-                        <rect x="820" y="720" width="300" height="180" fill="#d1fae5" stroke="#10b981" stroke-width="2" rx="4" />
-                        <text x="970" y="745" text-anchor="middle" font-size="16" font-weight="bold" fill="#065f46">«enum»</text>
-                        <text x="970" y="765" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">Streaming</text>
-                        <line x1="820" y1="775" x2="1120" y2="775" stroke="#10b981" stroke-width="2" />
-                        
-                        <text x="830" y="795" font-size="13" fill="#334155">NETFLIX</text>
-                        <text x="830" y="815" font-size="13" fill="#334155">AMAZON_PRIME</text>
-                        <text x="830" y="835" font-size="13" fill="#334155">HBO_MAX</text>
-                        <text x="830" y="855" font-size="13" fill="#334155">DISNEY_PLUS</text>
-                        <text x="970" y="795" font-size="13" fill="#334155">APPLE_TV</text>
-                        <text x="970" y="815" font-size="13" fill="#334155">PARAMOUNT_PLUS</text>
-                        <text x="970" y="835" font-size="13" fill="#334155">MUBI</text>
-                        <text x="970" y="855" font-size="13" fill="#334155">GLOBOPLAY</text>
-                        <line x1="820" y1="870" x2="1120" y2="870" stroke="#10b981" stroke-width="1" />
-                        <text x="830" y="890" font-size="13" fill="#334155">+ getNome(): String</text>
+                        <rect x="820" y="700" width="360" height="250" fill="#d1fae5" stroke="#10b981" stroke-width="2" rx="4"/>
+                        <text x="1000" y="722" text-anchor="middle" font-size="16" font-weight="bold" fill="#065f46">«enum»</text>
+                        <text x="1000" y="742" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">Streaming</text>
+                        <line x1="820" y1="750" x2="1180" y2="750" stroke="#10b981" stroke-width="2"/>
+                        <text x="830" y="770" font-size="12" fill="#334155">NETFLIX</text>
+                        <text x="830" y="788" font-size="12" fill="#334155">AMAZON_PRIME</text>
+                        <text x="830" y="806" font-size="12" fill="#334155">HBO_MAX</text>
+                        <text x="830" y="824" font-size="12" fill="#334155">DISNEY_PLUS</text>
+                        <text x="830" y="842" font-size="12" fill="#334155">APPLE_TV</text>
+                        <text x="830" y="860" font-size="12" fill="#334155">MUBI</text>
+                        <text x="1000" y="770" font-size="12" fill="#334155">GLOBOPLAY</text>
+                        <text x="1000" y="788" font-size="12" fill="#334155">MERCADO_PLAY</text>
+                        <text x="1000" y="806" font-size="12" fill="#334155">GOOGLE_PLAY</text>
+                        <text x="1000" y="824" font-size="12" fill="#334155">CLARO_TV_PLUS</text>
+                        <text x="1000" y="842" font-size="12" fill="#334155">YOUTUBE</text>
+                        <text x="1000" y="860" font-size="12" fill="#334155">TELECINE</text>
+                        <line x1="820" y1="880" x2="1180" y2="880" stroke="#10b981" stroke-width="1"/>
+                        <text x="830" y="900" font-size="12" fill="#334155">+ getNome(): String</text>
+                        <text x="830" y="918" font-size="12" fill="#334155">+ fromNome(String): Streaming</text>
                     </g>
 
+                    <!-- FaixaEtaria enum -->
                     <g id="faixaetaria-enum">
-                        <rect x="70" y="1050" width="280" height="160" fill="#d1fae5" stroke="#10b981" stroke-width="2" rx="4" />
-                        <text x="210" y="1075" text-anchor="middle" font-size="16" font-weight="bold" fill="#065f46">«enum»</text>
-                        <text x="210" y="1095" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">FaixaEtaria</text>
-                        <line x1="70" y1="1105" x2="350" y2="1105" stroke="#10b981" stroke-width="2" />
-                        
-                        <text x="80" y="1125" font-size="13" fill="#334155">LIVRE(0)</text>
-                        <text x="80" y="1145" font-size="13" fill="#334155">DOZE_ANOS(12)</text>
-                        <text x="80" y="1165" font-size="13" fill="#334155">QUATORZE_ANOS(14)</text>
-                        <text x="200" y="1125" font-size="13" fill="#334155">DEZESSEIS_ANOS(16)</text>
-                        <text x="200" y="1145" font-size="13" fill="#334155">DEZOITO_ANOS(18)</text>
-                        <line x1="70" y1="1180" x2="350" y2="1180" stroke="#10b981" stroke-width="1" />
-                        <text x="80" y="1200" font-size="13" fill="#334155">+ getIdadeMinima(): int</text>
+                        <rect x="50" y="1000" width="350" height="120" fill="#d1fae5" stroke="#10b981" stroke-width="2" rx="4"/>
+                        <text x="225" y="1022" text-anchor="middle" font-size="16" font-weight="bold" fill="#065f46">«enum»</text>
+                        <text x="225" y="1042" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">FaixaEtaria</text>
+                        <line x1="50" y1="1050" x2="400" y2="1050" stroke="#10b981" stroke-width="2"/>
+                        <text x="60" y="1070" font-size="12" fill="#334155">LIVRE(0)  MAIORES_6(6)  MAIORES_10(10)</text>
+                        <text x="60" y="1088" font-size="12" fill="#334155">MAIORES_12(12)  MAIORES_14(14)  MAIORES_16(16)  MAIORES_18(18)</text>
+                        <line x1="50" y1="1098" x2="400" y2="1098" stroke="#10b981" stroke-width="1"/>
+                        <text x="60" y="1115" font-size="12" fill="#334155">+ getIdadeMinima(): int  + fromTexto(String): FaixaEtaria</text>
                     </g>
 
-                    <line x1="420" y1="880" x2="500" y2="820" stroke="#2563eb" stroke-width="2" marker-start="url(#composition)" />
-                    <text x="430" y="845" font-size="12" fill="#2563eb" font-weight="bold">*</text>
-                    
-                    <line x1="420" y1="900" x2="820" y2="820" stroke="#2563eb" stroke-width="2" marker-start="url(#composition)" />
-                    <text x="590" y="870" font-size="12" fill="#2563eb" font-weight="bold">*</text>
-
-                    <line x1="350" y1="1000" x2="350" y2="1050" stroke="#2563eb" stroke-width="2" />
-                    <text x="360" y="1030" font-size="12" fill="#2563eb" font-weight="bold">1</text>
+                    <!-- Composition lines -->
+                    <line x1="400" y1="835" x2="440" y2="800" stroke="#2563eb" stroke-width="2" marker-start="url(#composition)"/>
+                    <text x="405" y="810" font-size="11" fill="#2563eb" font-weight="bold">*</text>
+                    <line x1="400" y1="855" x2="820" y2="800" stroke="#2563eb" stroke-width="2" marker-start="url(#composition)"/>
+                    <text x="600" y="830" font-size="11" fill="#2563eb" font-weight="bold">*</text>
                 </g>
+
+                <!-- ==================== PACKAGE SERVICO ==================== -->
                 <g id="package-servico">
-                    <rect x="1200" y="100" width="1150" height="800" fill="#fef9f3" stroke="#94a3b8" stroke-width="2" rx="8" />
-                    <text x="1220" y="130" font-size="20" font-weight="bold" fill="#1e293b">«package» servico</text>
-                    
-                    <g id="plataforma-recomendacao">
-                        <rect x="1230" y="160" width="360" height="300" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4" />
-                        <text x="1410" y="190" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">PlataformaRecomendacao</text>
-                        <line x1="1230" y1="200" x2="1590" y2="200" stroke="#f59e0b" stroke-width="2" />
-                        
-                        <text x="1240" y="220" font-size="13" fill="#334155">- catalogo: CatalogoOscar</text>
-                        <text x="1240" y="240" font-size="13" fill="#334155">- sistema: SistemaRecomendacao</text>
-                        <text x="1240" y="260" font-size="13" fill="#334155">- usuarioLogado: Usuario</text>
-                        <text x="1240" y="280" font-size="13" fill="#334155">- usuarios: Map&lt;String, Usuario&gt;</text>
-                        <line x1="1230" y1="290" x2="1590" y2="290" stroke="#f59e0b" stroke-width="1" />
-                        
-                        <text x="1240" y="310" font-size="13" fill="#334155">+ cadastrarUsuario()</text>
-                        <text x="1240" y="330" font-size="13" fill="#334155">+ fazerLogin()</text>
-                        <text x="1240" y="350" font-size="13" fill="#334155">+ configurarPreferencias()</text>
-                        <text x="1240" y="370" font-size="13" fill="#334155">+ obterRecomendacoes()</text>
-                        <text x="1240" y="390" font-size="13" fill="#334155">+ buscarFilme(String)</text>
-                        <text x="1240" y="410" font-size="13" fill="#334155">+ buscarFilme(int)</text>
-                        <text x="1240" y="430" font-size="13" fill="#334155">+ listarPorGenero()</text>
-                        <text x="1240" y="450" font-size="13" fill="#334155">+ exibirCatalogoCompleto()</text>
+                    <rect x="1280" y="90" width="1270" height="700" fill="#fef9f3" stroke="#94a3b8" stroke-width="2" rx="8"/>
+                    <text x="1300" y="120" font-size="20" font-weight="bold" fill="#1e293b">«package» servico</text>
+
+                    <!-- PlataformaRecomendacao -->
+                    <g>
+                        <rect x="1310" y="140" width="360" height="300" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4"/>
+                        <text x="1490" y="170" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">PlataformaRecomendacao</text>
+                        <line x1="1310" y1="180" x2="1670" y2="180" stroke="#f59e0b" stroke-width="2"/>
+                        <text x="1320" y="200" font-size="13" fill="#334155">- usuarios: ArrayList&lt;Usuario&gt;</text>
+                        <text x="1320" y="220" font-size="13" fill="#334155">- filmes: ArrayList&lt;Filme&gt;</text>
+                        <text x="1320" y="240" font-size="13" fill="#334155">- supabase: SupabaseClient</text>
+                        <line x1="1310" y1="250" x2="1670" y2="250" stroke="#f59e0b" stroke-width="1"/>
+                        <text x="1320" y="270" font-size="13" fill="#334155">+ cadastrarUsuario()</text>
+                        <text x="1320" y="290" font-size="13" fill="#334155">+ login(String, String): Usuario</text>
+                        <text x="1320" y="310" font-size="13" fill="#334155">+ salvarPreferencias(Usuario)</text>
+                        <text x="1320" y="330" font-size="13" fill="#334155">+ recomendar(Usuario): ArrayList</text>
+                        <text x="1320" y="350" font-size="13" fill="#334155">+ buscarFilme(String): Filme</text>
+                        <text x="1320" y="370" font-size="13" fill="#334155">+ buscarFilme(int): Filme</text>
+                        <text x="1320" y="390" font-size="13" fill="#334155">+ listarPorGenero(Genero): ArrayList</text>
+                        <text x="1320" y="410" font-size="13" fill="#334155">+ listarTodos(): ArrayList</text>
+                        <text x="1320" y="430" font-size="13" fill="#334155">- parseIntSafe(String, int): int</text>
                     </g>
 
-                    <g id="sistema-recomendacao">
-                        <rect x="1650" y="160" width="360" height="260" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4" />
-                        <text x="1830" y="190" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">SistemaRecomendacao</text>
-                        <line x1="1650" y1="200" x2="2010" y2="200" stroke="#f59e0b" stroke-width="2" />
-                        
-                        <text x="1660" y="220" font-size="13" fill="#334155">- PESO_GENERO: int = 3</text>
-                        <text x="1660" y="240" font-size="13" fill="#334155">- PESO_STREAMING: int = 2</text>
-                        <text x="1660" y="260" font-size="13" fill="#334155">- PESO_DURACAO: int = 2</text>
-                        <text x="1660" y="280" font-size="13" fill="#334155">- PESO_FAIXA_ETARIA: int = 1</text>
-                        <text x="1660" y="300" font-size="13" fill="#334155">- PESO_NOTA_IMDB: int = 1</text>
-                        <line x1="1650" y1="310" x2="2010" y2="310" stroke="#f59e0b" stroke-width="1" />
-                        
-                        <text x="1660" y="330" font-size="13" fill="#334155">+ recomendar(Usuario, List&lt;Filme&gt;)</text>
-                        <text x="1660" y="350" font-size="13" fill="#334155">- calcularPontuacao(Usuario, Filme)</text>
-                        <text x="1660" y="370" font-size="13" fill="#334155">- filtrarPorIdade(Usuario, List&lt;Filme&gt;)</text>
-                        <text x="1660" y="390" font-size="13" fill="#334155">- ordenarPorPontuacao()</text>
-                        <text x="1660" y="410" font-size="13" fill="#334155">- aplicarFiltros()</text>
+                    <!-- SistemaRecomendacao -->
+                    <g>
+                        <rect x="1720" y="140" width="380" height="250" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4"/>
+                        <text x="1910" y="170" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">SistemaRecomendacao</text>
+                        <line x1="1720" y1="180" x2="2100" y2="180" stroke="#f59e0b" stroke-width="2"/>
+                        <text x="1730" y="200" font-size="13" fill="#334155">- PESO_GENERO: int = 3</text>
+                        <text x="1730" y="220" font-size="13" fill="#334155">- PESO_STREAMING: int = 2</text>
+                        <text x="1730" y="240" font-size="13" fill="#334155">- PESO_DURACAO: int = 2</text>
+                        <text x="1730" y="260" font-size="13" fill="#334155">- PESO_FAIXA_ETARIA: int = 1</text>
+                        <line x1="1720" y1="270" x2="2100" y2="270" stroke="#f59e0b" stroke-width="1"/>
+                        <text x="1730" y="290" font-size="13" fill="#334155">+ recomendar(Usuario, ArrayList&lt;Filme&gt;)</text>
+                        <text x="1730" y="310" font-size="13" fill="#334155">- calcularScore(Filme, Usuario): int</text>
+                        <text x="1730" y="330" font-size="13" fill="#334155">- filtrarPorGenero()</text>
+                        <text x="1730" y="350" font-size="13" fill="#334155">- filtrarPorDuracao()</text>
+                        <text x="1730" y="370" font-size="13" fill="#334155">- filtrarPorFaixaEtaria()</text>
+                        <text x="1730" y="390" font-size="13" fill="#334155">- filtrarPorStreaming()</text>
                     </g>
 
-                    <g id="catalogo-oscar">
-                        <rect x="1230" y="520" width="360" height="200" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4" />
-                        <text x="1410" y="550" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">CatalogoOscar</text>
-                        <line x1="1230" y1="560" x2="1590" y2="560" stroke="#f59e0b" stroke-width="2" />
-                        
-                        <text x="1240" y="580" font-size="13" fill="#334155">- filmes: ArrayList&lt;Filme&gt;</text>
-                        <line x1="1230" y1="590" x2="1590" y2="590" stroke="#f59e0b" stroke-width="1" />
-                        
-                        <text x="1240" y="610" font-size="13" fill="#334155">+ inicializarCatalogo()</text>
-                        <text x="1240" y="630" font-size="13" fill="#334155">+ getTodosFilmes(): List&lt;Filme&gt;</text>
-                        <text x="1240" y="650" font-size="13" fill="#334155">+ buscarPorTitulo(String): Filme</text>
-                        <text x="1240" y="670" font-size="13" fill="#334155">+ buscarPorId(int): Filme</text>
-                        <text x="1240" y="690" font-size="13" fill="#334155">+ filtrarPorGenero(Genero): List&lt;Filme&gt;</text>
-                        <text x="1240" y="710" font-size="13" fill="#334155">+ getTotalFilmes(): int</text>
+                    <!-- CatalogoOscar -->
+                    <g>
+                        <rect x="1310" y="490" width="380" height="200" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4"/>
+                        <text x="1500" y="520" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">CatalogoOscar</text>
+                        <line x1="1310" y1="530" x2="1690" y2="530" stroke="#f59e0b" stroke-width="2"/>
+                        <text x="1320" y="550" font-size="13" fill="#334155">  (lê filmes.json)</text>
+                        <line x1="1310" y1="560" x2="1690" y2="560" stroke="#f59e0b" stroke-width="1"/>
+                        <text x="1320" y="580" font-size="13" fill="#334155">+ getFilmes(): ArrayList&lt;Filme&gt;</text>
+                        <text x="1320" y="600" font-size="13" fill="#334155">- parsarFilmes(String, ArrayList)</text>
+                        <text x="1320" y="620" font-size="13" fill="#334155">- criarFilmePorGenero(): Filme</text>
+                        <text x="1320" y="640" font-size="13" fill="#334155">- parsarDuracao(String): int</text>
+                        <text x="1320" y="660" font-size="13" fill="#334155">- extrairArray(String, String)</text>
+                        <text x="1320" y="680" font-size="13" fill="#334155">- extrairString(String, String)</text>
                     </g>
 
-                    <line x1="1590" y1="280" x2="1650" y2="280" stroke="#475569" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#association)" />
-                    <text x="1605" y="270" font-size="12" fill="#475569">usa</text>
+                    <!-- ApiHandler -->
+                    <g>
+                        <rect x="1740" y="490" width="380" height="180" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4"/>
+                        <text x="1930" y="520" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">ApiHandler</text>
+                        <line x1="1740" y1="530" x2="2120" y2="530" stroke="#f59e0b" stroke-width="2"/>
+                        <text x="1750" y="550" font-size="13" fill="#334155">- plataforma: PlataformaRecomendacao</text>
+                        <line x1="1740" y1="560" x2="2120" y2="560" stroke="#f59e0b" stroke-width="1"/>
+                        <text x="1750" y="580" font-size="13" fill="#334155">+ main(String[] args): void</text>
+                        <text x="1750" y="600" font-size="13" fill="#334155">- login(String json)</text>
+                        <text x="1750" y="620" font-size="13" fill="#334155">- filmes()</text>
+                        <text x="1750" y="640" font-size="13" fill="#334155">- recomendados(String json)</text>
+                        <text x="1750" y="660" font-size="13" fill="#334155">- preferenciasSet(String json)</text>
+                    </g>
 
-                    <line x1="1410" y1="460" x2="1410" y2="520" stroke="#475569" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#association)" />
-                    <text x="1420" y="495" font-size="12" fill="#475569">consulta</text>
+                    <!-- Associations within servico -->
+                    <line x1="1670" y1="260" x2="1720" y2="260" stroke="#475569" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#association)"/>
+                    <text x="1678" y="250" font-size="12" fill="#475569">usa</text>
+                    <line x1="1490" y1="440" x2="1490" y2="490" stroke="#475569" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#association)"/>
+                    <text x="1500" y="470" font-size="12" fill="#475569">consulta</text>
+                    <line x1="1930" y1="490" x2="1600" y2="440" stroke="#475569" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#association)"/>
+                    <text x="1750" y="455" font-size="12" fill="#475569">usa</text>
                 </g>
 
+                <!-- ==================== PACKAGE EXCECAO ==================== -->
                 <g id="package-excecao">
-                    <rect x="1200" y="960" width="1150" height="420" fill="#fef2f2" stroke="#94a3b8" stroke-width="2" rx="8" />
-                    <text x="1220" y="990" font-size="20" font-weight="bold" fill="#1e293b">«package» excecao</text>
-                    
-                    <g id="exception-base">
-                        <rect x="1600" y="1020" width="280" height="100" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="4" />
-                        <text x="1740" y="1050" text-anchor="middle" font-size="16" font-weight="bold" fill="#991b1b">«exception»</text>
-                        <text x="1740" y="1070" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">Exception</text>
-                        <line x1="1600" y1="1080" x2="1880" y2="1080" stroke="#dc2626" stroke-width="1" />
-                        <text x="1610" y="1100" font-size="13" fill="#334155">+ getMessage(): String</text>
-                    </g>
+                    <rect x="1280" y="840" width="1270" height="300" fill="#fef2f2" stroke="#94a3b8" stroke-width="2" rx="8"/>
+                    <text x="1300" y="870" font-size="20" font-weight="bold" fill="#1e293b">«package» excecao</text>
 
-                    <g id="usuario-ja-cadastrado">
-                        <rect x="1220" y="1200" width="280" height="90" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="4" />
-                        <text x="1360" y="1230" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">UsuarioJaCadastrado</text>
-                        <text x="1360" y="1250" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">Exception</text>
-                        <line x1="1220" y1="1260" x2="1500" y2="1260" stroke="#dc2626" stroke-width="1" />
-                        <text x="1230" y="1280" font-size="13" fill="#334155">+ UsuarioJaCadastradoException()</text>
-                    </g>
+                    <g><rect x="1680" y="890" width="240" height="70" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="4"/>
+                        <text x="1800" y="920" text-anchor="middle" font-size="14" font-weight="bold" fill="#991b1b">«exception»</text>
+                        <text x="1800" y="940" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">Exception</text></g>
 
-                    <g id="senha-invalida">
-                        <rect x="1530" y="1200" width="240" height="90" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="4" />
-                        <text x="1650" y="1230" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">SenhaInvalida</text>
-                        <text x="1650" y="1250" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">Exception</text>
-                        <line x1="1530" y1="1260" x2="1770" y2="1260" stroke="#dc2626" stroke-width="1" />
-                        <text x="1540" y="1280" font-size="13" fill="#334155">+ SenhaInvalidaException()</text>
-                    </g>
+                    <g><rect x="1310" y="1030" width="260" height="60" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="4"/>
+                        <text x="1440" y="1060" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">UsuarioJaCadastradoException</text>
+                        <text x="1440" y="1080" text-anchor="middle" font-size="11" fill="#64748b">email duplicado</text></g>
 
-                    <g id="idade-invalida">
-                        <rect x="1800" y="1200" width="240" height="90" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="4" />
-                        <text x="1920" y="1230" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">IdadeInvalida</text>
-                        <text x="1920" y="1250" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">Exception</text>
-                        <line x1="1800" y1="1260" x2="2040" y2="1260" stroke="#dc2626" stroke-width="1" />
-                        <text x="1810" y="1280" font-size="13" fill="#334155">+ IdadeInvalidaException()</text>
-                    </g>
+                    <g><rect x="1600" y="1030" width="220" height="60" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="4"/>
+                        <text x="1710" y="1060" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">SenhaInvalidaException</text>
+                        <text x="1710" y="1080" text-anchor="middle" font-size="11" fill="#64748b">login falhou</text></g>
 
-                    <g id="filme-nao-encontrado">
-                        <rect x="2070" y="1200" width="250" height="90" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="4" />
-                        <text x="2195" y="1230" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">FilmeNaoEncontrado</text>
-                        <text x="2195" y="1250" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">Exception</text>
-                        <line x1="2070" y1="1260" x2="2320" y2="1260" stroke="#dc2626" stroke-width="1" />
-                        <text x="2080" y="1280" font-size="13" fill="#334155">+ FilmeNaoEncontradoException()</text>
-                    </g>
+                    <g><rect x="1850" y="1030" width="220" height="60" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="4"/>
+                        <text x="1960" y="1060" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">IdadeInvalidaException</text>
+                        <text x="1960" y="1080" text-anchor="middle" font-size="11" fill="#64748b">idade &lt;= 0</text></g>
 
-                    <line x1="1360" y1="1200" x2="1700" y2="1120" stroke="black" stroke-width="2" marker-end="url(#inheritance)" />
-                    <line x1="1650" y1="1200" x2="1720" y2="1120" stroke="black" stroke-width="2" marker-end="url(#inheritance)" />
-                    <line x1="1920" y1="1200" x2="1760" y2="1120" stroke="black" stroke-width="2" marker-end="url(#inheritance)" />
-                    <line x1="2195" y1="1200" x2="1800" y2="1120" stroke="black" stroke-width="2" marker-end="url(#inheritance)" />
+                    <g><rect x="2100" y="1030" width="250" height="60" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="4"/>
+                        <text x="2225" y="1060" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">FilmeNaoEncontradoException</text>
+                        <text x="2225" y="1080" text-anchor="middle" font-size="11" fill="#64748b">busca sem resultado</text></g>
+
+                    <line x1="1440" y1="1030" x2="1750" y2="960" stroke="black" stroke-width="1.5" marker-end="url(#inheritance)"/>
+                    <line x1="1710" y1="1030" x2="1780" y2="960" stroke="black" stroke-width="1.5" marker-end="url(#inheritance)"/>
+                    <line x1="1960" y1="1030" x2="1830" y2="960" stroke="black" stroke-width="1.5" marker-end="url(#inheritance)"/>
+                    <line x1="2225" y1="1030" x2="1860" y2="960" stroke="black" stroke-width="1.5" marker-end="url(#inheritance)"/>
                 </g>
 
+                <!-- ==================== PACKAGE INFRA ==================== -->
                 <g id="package-infra">
-                    <rect x="1200" y="1440" width="1150" height="340" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2" rx="8" />
-                    <text x="1220" y="1470" font-size="20" font-weight="bold" fill="#1e293b">«package» infra</text>
+                    <rect x="1280" y="1190" width="1270" height="280" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2" rx="8"/>
+                    <text x="1300" y="1220" font-size="20" font-weight="bold" fill="#1e293b">«package» infra</text>
 
-                    <g id="supabase-config">
-                        <rect x="1260" y="1510" width="420" height="220" fill="#e0e7ff" stroke="#6366f1" stroke-width="2" rx="4" />
-                        <text x="1470" y="1540" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">SupabaseConfig</text>
-                        <line x1="1260" y1="1550" x2="1680" y2="1550" stroke="#6366f1" stroke-width="2" />
-                        
-                        <text x="1270" y="1570" font-size="13" fill="#334155">- SUPABASE_URL: String</text>
-                        <text x="1270" y="1590" font-size="13" fill="#334155">- SUPABASE_ANON_KEY: String</text>
-                        <text x="1270" y="1610" font-size="13" fill="#334155">- ENV_FILE: String = ".env"</text>
-                        <line x1="1260" y1="1620" x2="1680" y2="1620" stroke="#6366f1" stroke-width="1" />
-                        
-                        <text x="1270" y="1640" font-size="13" fill="#334155">+ carregarVariaveisAmbiente()</text>
-                        <text x="1270" y="1660" font-size="13" fill="#334155">+ getSupabaseUrl(): String</text>
-                        <text x="1270" y="1680" font-size="13" fill="#334155">+ getSupabaseAnonKey(): String</text>
-                        <text x="1270" y="1700" font-size="13" fill="#334155">+ isConfigured(): boolean</text>
-                        <text x="1270" y="1720" font-size="13" fill="#334155">- lerArquivoEnv(): Map&lt;String, String&gt;</text>
-                    </g>
+                    <g><rect x="1310" y="1250" width="400" height="180" fill="#e0e7ff" stroke="#6366f1" stroke-width="2" rx="4"/>
+                        <text x="1510" y="1278" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">SupabaseConfig</text>
+                        <line x1="1310" y1="1288" x2="1710" y2="1288" stroke="#6366f1" stroke-width="2"/>
+                        <text x="1320" y="1308" font-size="13" fill="#334155">- props: Properties</text>
+                        <line x1="1310" y1="1320" x2="1710" y2="1320" stroke="#6366f1" stroke-width="1"/>
+                        <text x="1320" y="1340" font-size="13" fill="#334155">+ getUrl(): String</text>
+                        <text x="1320" y="1360" font-size="13" fill="#334155">+ getAnonKey(): String</text>
+                        <text x="1320" y="1380" font-size="13" fill="#334155">+ isConfigurado(): boolean</text></g>
 
-                    <g id="supabase-client">
-                        <rect x="1740" y="1510" width="480" height="220" fill="#e0e7ff" stroke="#6366f1" stroke-width="2" rx="4" />
-                        <text x="1980" y="1540" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">SupabaseClient</text>
-                        <line x1="1740" y1="1550" x2="2220" y2="1550" stroke="#6366f1" stroke-width="2" />
-                        
-                        <text x="1750" y="1570" font-size="13" fill="#334155">- httpClient: HttpClient</text>
-                        <text x="1750" y="1590" font-size="13" fill="#334155">- config: SupabaseConfig</text>
-                        <line x1="1740" y1="1600" x2="2220" y2="1600" stroke="#6366f1" stroke-width="1" />
-                        
-                        <text x="1750" y="1620" font-size="13" fill="#334155">+ cadastrarUsuario(Usuario): boolean</text>
-                        <text x="1750" y="1640" font-size="13" fill="#334155">+ autenticarUsuario(String, String): Usuario</text>
-                        <text x="1750" y="1660" font-size="13" fill="#334155">+ salvarPreferencias(Usuario): boolean</text>
-                        <text x="1750" y="1680" font-size="13" fill="#334155">+ carregarPreferencias(String): Usuario</text>
-                        <text x="1750" y="1700" font-size="13" fill="#334155">- enviarRequisicao(HttpRequest): HttpResponse</text>
-                        <text x="1750" y="1720" font-size="13" fill="#334155">- construirHeaders(): Map&lt;String, String&gt;</text>
-                    </g>
+                    <g><rect x="1760" y="1250" width="460" height="180" fill="#e0e7ff" stroke="#6366f1" stroke-width="2" rx="4"/>
+                        <text x="1990" y="1278" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">SupabaseClient</text>
+                        <line x1="1760" y1="1288" x2="2220" y2="1288" stroke="#6366f1" stroke-width="2"/>
+                        <text x="1770" y="1308" font-size="13" fill="#334155">- http: HttpClient</text>
+                        <line x1="1760" y1="1320" x2="2220" y2="1320" stroke="#6366f1" stroke-width="1"/>
+                        <text x="1770" y="1340" font-size="13" fill="#334155">+ cadastrar() / login()</text>
+                        <text x="1770" y="1360" font-size="13" fill="#334155">+ carregarPerfil() / criarPerfil()</text>
+                        <text x="1770" y="1380" font-size="13" fill="#334155">+ salvarGeneros() / carregarGeneros()</text>
+                        <text x="1770" y="1400" font-size="13" fill="#334155">+ salvarStreamings() / carregarStreamings()</text>
+                        <text x="1770" y="1420" font-size="13" fill="#334155">+ atualizarDuracao()</text></g>
 
-                    <line x1="1740" y1="1620" x2="1680" y2="1620" stroke="#475569" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#association)" />
-                    <text x="1690" y="1610" font-size="12" fill="#475569">usa</text>
+                    <line x1="1760" y1="1360" x2="1710" y2="1360" stroke="#475569" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#association)"/>
+                    <text x="1718" y="1350" font-size="12" fill="#475569">usa</text>
                 </g>
 
+                <!-- ==================== MAIN ==================== -->
                 <g id="main-class">
-                    <rect x="50" y="1600" width="380" height="180" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4" />
-                    <text x="240" y="1630" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">Main</text>
-                    <line x1="50" y1="1640" x2="430" y2="1640" stroke="#f59e0b" stroke-width="2" />
-                    
-                    <text x="60" y="1660" font-size="13" fill="#334155">- scanner: Scanner</text>
-                    <text x="60" y="1680" font-size="13" fill="#334155">- plataforma: PlataformaRecomendacao</text>
-                    <line x1="50" y1="1690" x2="430" y2="1690" stroke="#f59e0b" stroke-width="1" />
-                    
-                    <text x="60" y="1710" font-size="13" fill="#334155">+ main(String[] args): void</text>
-                    <text x="60" y="1730" font-size="13" fill="#334155">- exibirMenu(): void</text>
-                    <text x="60" y="1750" font-size="13" fill="#334155">- processarOpcao(int): void</text>
-                    <text x="60" y="1770" font-size="13" fill="#334155">- executarFluxoInterativo(): void</text>
+                    <rect x="50" y="1200" width="350" height="150" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4"/>
+                    <text x="225" y="1228" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">Main</text>
+                    <line x1="50" y1="1238" x2="400" y2="1238" stroke="#f59e0b" stroke-width="2"/>
+                    <text x="60" y="1258" font-size="13" fill="#334155">- scanner: Scanner</text>
+                    <text x="60" y="1278" font-size="13" fill="#334155">- plataforma: PlataformaRecomendacao</text>
+                    <line x1="50" y1="1290" x2="400" y2="1290" stroke="#f59e0b" stroke-width="1"/>
+                    <text x="60" y="1310" font-size="13" fill="#334155">+ main(String[] args): void</text>
+                    <text x="60" y="1330" font-size="13" fill="#334155">- exibirMenu() / processarOpcao()</text>
                 </g>
 
-                <line x1="430" y1="1680" x2="1230" y2="300" stroke="#475569" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#association)" />
-                <text x="800" y="1000" font-size="14" fill="#475569" font-weight="bold">usa</text>
+                <!-- ==================== CROSS-PACKAGE ASSOCIATIONS ==================== -->
+                <line x1="400" y1="1280" x2="1310" y2="300" stroke="#475569" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#association)"/>
+                <text x="830" y="800" font-size="14" fill="#475569" font-weight="bold">usa</text>
 
-                <line x1="1230" y1="340" x2="420" y2="850" stroke="#475569" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#association)" />
-                <text x="780" y="590" font-size="14" fill="#475569" font-weight="bold">gerencia</text>
+                <line x1="1310" y1="300" x2="400" y2="810" stroke="#475569" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#association)"/>
+                <text x="810" y="550" font-size="14" fill="#475569" font-weight="bold">gerencia</text>
 
-                <line x1="1230" y1="620" x2="700" y2="270" stroke="#2563eb" stroke-width="2" marker-start="url(#composition)" />
-                <text x="950" y="440" font-size="14" fill="#2563eb" font-weight="bold">contém *</text>
+                <line x1="1310" y1="590" x2="720" y2="270" stroke="#2563eb" stroke-width="2" marker-start="url(#composition)"/>
+                <text x="1000" y="420" font-size="14" fill="#2563eb" font-weight="bold">contém *</text>
 
-                <line x1="1830" y1="420" x2="700" y2="300" stroke="#475569" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#association)" />
-                <text x="1200" y="350" font-size="14" fill="#475569" font-weight="bold">analisa</text>
+                <line x1="1490" y1="440" x2="1990" y2="1250" stroke="#475569" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#association)"/>
+                <text x="1650" y="860" font-size="14" fill="#475569" font-weight="bold">usa</text>
 
-                <line x1="1410" y1="460" x2="1360" y2="1200" stroke="#dc2626" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#association)" />
-                <text x="1380" y="850" font-size="14" fill="#dc2626" font-weight="bold">lança</text>
+                <line x1="1990" y1="1380" x2="400" y2="870" stroke="#475569" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#association)"/>
+                <text x="1150" y="1130" font-size="14" fill="#475569" font-weight="bold">persiste</text>
 
-                <line x1="1740" y1="1650" x2="420" y2="900" stroke="#475569" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#association)" />
-                <text x="1050" y="1280" font-size="14" fill="#475569" font-weight="bold">persiste</text>
-
-                <line x1="1410" y1="460" x2="1980" y2="1510" stroke="#475569" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#association)" />
-                <text x="1600" y="1000" font-size="14" fill="#475569" font-weight="bold">usa</text>
-
+                <!-- ==================== LEGEND ==================== -->
                 <g id="legend">
-                    <text x="50" y="2000" font-size="20" font-weight="bold" fill="#1e293b">Relacionamentos:</text>
-                    <text x="50" y="2030" font-size="14" fill="#334155">━━━━▷ Herança (extends)</text>
-                    <text x="50" y="2060" font-size="14" fill="#334155">┈┈┈┈▷ Associação/Uso (usa, chama métodos)</text>
-                    <text x="50" y="2090" font-size="14" fill="#334155">◆━━━━ Composição (contém, possui)</text>
-                    
-                    <text x="600" y="2000" font-size="20" font-weight="bold" fill="#1e293b">Conceitos POO Aplicados:</text>
-                    <text x="600" y="2030" font-size="14" fill="#334155">• Herança: Filme → FilmeDrama, FilmeComedia, etc.</text>
-                    <text x="600" y="2060" font-size="14" fill="#334155">• Polimorfismo: getGenero() sobrescrito em cada subclasse</text>
-                    <text x="600" y="2090" font-size="14" fill="#334155">• Abstração: Classe Filme abstrata</text>
-                    <text x="600" y="2120" font-size="14" fill="#334155">• Encapsulamento: atributos private + getters/setters</text>
-                    <text x="600" y="2150" font-size="14" fill="#334155">• Composição: Usuario possui ArrayList de Genero e Streaming</text>
-                    <text x="600" y="2180" font-size="14" fill="#334155">• Exceções customizadas: UsuarioJaCadastradoException, etc.</text>
-                    <text x="600" y="2210" font-size="14" fill="#334155">• Enums: Genero, Streaming, FaixaEtaria</text>
-                    
-                    <text x="1400" y="2000" font-size="20" font-weight="bold" fill="#1e293b">Padrões de Projeto:</text>
-                    <text x="1400" y="2030" font-size="14" fill="#334155">• Facade: PlataformaRecomendacao (interface simplificada)</text>
-                    <text x="1400" y="2060" font-size="14" fill="#334155">• Strategy: SistemaRecomendacao (algoritmo de pontuação)</text>
-                    <text x="1400" y="2090" font-size="14" fill="#334155">• Singleton: CatalogoOscar (catálogo único)</text>
-                    <text x="1400" y="2120" font-size="14" fill="#334155">• Repository: SupabaseClient (persistência de dados)</text>
-                </g>
+                    <text x="50" y="1550" font-size="20" font-weight="bold" fill="#1e293b">Conceitos POO Aplicados:</text>
+                    <text x="50" y="1580" font-size="14" fill="#334155">Heranca: Filme -> FilmeDrama, FilmeComedia, FilmeMusical, FilmeCrime, etc. (13 subclasses)</text>
+                    <text x="50" y="1610" font-size="14" fill="#334155">Polimorfismo: getGenero() sobrescrito em cada subclasse</text>
+                    <text x="50" y="1640" font-size="14" fill="#334155">Abstracao: Classe Filme abstrata</text>
+                    <text x="50" y="1670" font-size="14" fill="#334155">Encapsulamento: atributos private + getters/setters</text>
+                    <text x="50" y="1700" font-size="14" fill="#334155">Composicao: Usuario possui ArrayList de Genero e Streaming</text>
+                    <text x="50" y="1730" font-size="14" fill="#334155">Excecoes customizadas: UsuarioJaCadastradoException, SenhaInvalidaException, etc.</text>
+                    <text x="50" y="1760" font-size="14" fill="#334155">Enums: Genero (21 valores), Streaming (12 valores), FaixaEtaria (7 valores)</text>
 
-               
+                    <text x="1300" y="1550" font-size="20" font-weight="bold" fill="#1e293b">Padroes de Projeto:</text>
+                    <text x="1300" y="1580" font-size="14" fill="#334155">Facade: PlataformaRecomendacao (interface simplificada para o sistema)</text>
+                    <text x="1300" y="1610" font-size="14" fill="#334155">Strategy: SistemaRecomendacao (algoritmo de pontuacao intercambiavel)</text>
+                    <text x="1300" y="1640" font-size="14" fill="#334155">Factory: CatalogoOscar.criarFilmePorGenero() (instancia subclasse correta)</text>
+                    <text x="1300" y="1670" font-size="14" fill="#334155">Repository: SupabaseClient (persistencia de dados)</text>
+                </g>
             </svg>
         </div>
     </div>
 
     <footer>
         <div class="legend">
-            <div class="legend-item">
-                <div class="legend-line"></div>
-                <span class="legend-text">Herança</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-line-dashed"></div>
-                <span class="legend-text">Associação/Uso</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-line-composition"></div>
-                <span class="legend-text">Composição</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-box legend-box-abstract"></div>
-                <span class="legend-text">Classe Abstrata</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-box legend-box-enum"></div>
-                <span class="legend-text">Enum</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-box legend-box-exception"></div>
-                <span class="legend-text">Exception</span>
-            </div>
+            <div class="legend-item"><div class="legend-line"></div><span class="legend-text">Heranca</span></div>
+            <div class="legend-item"><div class="legend-line-dashed"></div><span class="legend-text">Associacao/Uso</span></div>
+            <div class="legend-item"><div class="legend-line-composition"></div><span class="legend-text">Composicao</span></div>
+            <div class="legend-item"><div class="legend-box legend-box-abstract"></div><span class="legend-text">Classe Abstrata</span></div>
+            <div class="legend-item"><div class="legend-box legend-box-enum"></div><span class="legend-text">Enum</span></div>
+            <div class="legend-item"><div class="legend-box legend-box-exception"></div><span class="legend-text">Exception</span></div>
         </div>
     </footer>
 
     <script>
         let currentZoom = 1;
-        const minZoom = 0.5;
-        const maxZoom = 2;
-        const zoomStep = 0.1;
-
+        const minZoom = 0.3, maxZoom = 2, zoomStep = 0.1;
         const diagramWrapper = document.getElementById('diagramWrapper');
         const zoomLabel = document.getElementById('zoomLabel');
-        const zoomInBtn = document.getElementById('zoomIn');
-        const zoomOutBtn = document.getElementById('zoomOut');
-        const zoomResetBtn = document.getElementById('zoomReset');
 
-        function updateZoom(newZoom) {
-            currentZoom = Math.max(minZoom, Math.min(maxZoom, newZoom));
+        function updateZoom(z) {
+            currentZoom = Math.max(minZoom, Math.min(maxZoom, z));
             diagramWrapper.style.transform = `scale(${currentZoom})`;
             zoomLabel.textContent = `${Math.round(currentZoom * 100)}%`;
         }
 
-        zoomInBtn.addEventListener('click', () => {
-            updateZoom(currentZoom + zoomStep);
-        });
+        document.getElementById('zoomIn').addEventListener('click', () => updateZoom(currentZoom + zoomStep));
+        document.getElementById('zoomOut').addEventListener('click', () => updateZoom(currentZoom - zoomStep));
+        document.getElementById('zoomReset').addEventListener('click', () => updateZoom(1));
 
-        zoomOutBtn.addEventListener('click', () => {
-            updateZoom(currentZoom - zoomStep);
-        });
-
-        zoomResetBtn.addEventListener('click', () => {
-            updateZoom(1);
-        });
-
-        document.addEventListener('keydown', (e) => {
+        document.addEventListener('keydown', e => {
             if (e.ctrlKey || e.metaKey) {
-                if (e.key === '+' || e.key === '=') {
-                    e.preventDefault();
-                    updateZoom(currentZoom + zoomStep);
-                } else if (e.key === '-') {
-                    e.preventDefault();
-                    updateZoom(currentZoom - zoomStep);
-                } else if (e.key === '0') {
-                    e.preventDefault();
-                    updateZoom(1);
-                }
+                if (e.key === '+' || e.key === '=') { e.preventDefault(); updateZoom(currentZoom + zoomStep); }
+                else if (e.key === '-') { e.preventDefault(); updateZoom(currentZoom - zoomStep); }
+                else if (e.key === '0') { e.preventDefault(); updateZoom(1); }
             }
         });
 
-        const diagramContainer = document.getElementById('diagramContainer');
-        diagramContainer.addEventListener('wheel', (e) => {
-            if (e.ctrlKey || e.metaKey) {
-                e.preventDefault();
-                const delta = e.deltaY > 0 ? -zoomStep : zoomStep;
-                updateZoom(currentZoom + delta);
-            }
+        document.getElementById('diagramContainer').addEventListener('wheel', e => {
+            if (e.ctrlKey || e.metaKey) { e.preventDefault(); updateZoom(currentZoom + (e.deltaY > 0 ? -zoomStep : zoomStep)); }
         });
     </script>
 </body>

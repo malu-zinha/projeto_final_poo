@@ -1,15 +1,18 @@
 package modelo;
 
-// Enum que representa as plataformas de streaming disponíveis no Brasil
 public enum Streaming {
     NETFLIX("Netflix"),
     AMAZON_PRIME("Amazon Prime Video"),
     HBO_MAX("HBO Max"),
     DISNEY_PLUS("Disney+"),
     APPLE_TV("Apple TV+"),
-    PARAMOUNT_PLUS("Paramount+"),
     MUBI("MUBI"),
-    GLOBOPLAY("Globoplay");
+    GLOBOPLAY("Globoplay"),
+    MERCADO_PLAY("Mercado Play"),
+    GOOGLE_PLAY("Google Play Filmes e TV"),
+    CLARO_TV_PLUS("Claro TV+"),
+    YOUTUBE("Youtube"),
+    TELECINE("Telecine");
 
     private final String nome;
 
@@ -19,5 +22,15 @@ public enum Streaming {
 
     public String getNome() {
         return nome;
+    }
+
+    public static Streaming fromNome(String nome) {
+        String limpo = nome.replaceAll("\\s*\\(.*\\)\\s*$", "").trim();
+        for (Streaming s : values()) {
+            if (s.nome.equalsIgnoreCase(limpo)) {
+                return s;
+            }
+        }
+        return null;
     }
 }
